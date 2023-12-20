@@ -12,3 +12,14 @@
       std::cout << "**********************\n";
       return 0 ;
     }
+## 2-Write a program to do the following shape:
+      #include <iostream>
+     int main()
+     {
+       std::cout << "*********\n";
+       std::cout << "*********\n";
+       std::cout << "*********\n";
+       std::cout << "*********\n";
+       
+       return 0 ;
+     }  
