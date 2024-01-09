@@ -309,10 +309,10 @@
           using namespace std;
           int main()
           {
-            int a , b , g ;
+            int a, b, g ;
             int p = (a + b + g)/2;
             int t = (a * b * g )/( 4 * sqrt(p * (p -a) * (p -b) *(p -g) ));
-            cout << "please enter a value" << endl;
+            cout << "Please enter a value" << endl;
             cin >>a ;
           
             cout << "please enter b value " << endl;
@@ -326,3 +326,100 @@
             return 0;
           
           }
+## Pover of 2,3,4:
+
+          #include <iostream>
+          #include <cmath>
+          using namespace std;
+          int main()
+          {
+            int a, b, g ;
+            int p = (a + b + g)/2;
+            int t = (a * b * g )/( 4 * sqrt(p * (p -a) * (p -b) *(p -g) ));
+            cout << "Please enter a value" << endl;
+            cin >>a ;
+          
+            cout << "please enter b value " << endl;
+            cin >> b ;
+          
+            cout << "please enter g value " << endl;
+            cin >> g ;
+          
+            cout << "Area = " << 3.14 * pow(t,2 ) ;
+          
+            return 0;
+          
+          }
+## Power of M:
+          #include <iostream>
+          #include <cmath>
+          using namespace std;
+          int main()
+          {
+            int number, M ;
+            cout<< "Please enter number: ";
+            cin >> number;
+          
+            cout << "Please enter M: ";
+            cin >> M;
+          
+            cout << "Power Number of M = "<< pow(number,M)<<endl;
+          
+            return 0;
+          
+          }
+Task Duration In Seconds:
+
+          #include <iostream>
+          #include <cmath>
+          using namespace std;
+          int main()
+          {
+            int days, hours, minutes, seconds;
+            cout << "Please enter days: "<<endl;
+            cin>>days;
+          
+            cout << "Please enter hours: "<<endl;
+            cin>>hours;
+          
+            cout << "Please enter minutes: "<<endl;
+            cin>>minutes;
+          
+            cout << "Please enter seconds: "<<endl;
+            cin>>seconds;
+            
+            int d = days * 24 * 60 * 60;
+            int h = hours * 60 * 60;
+            int m = minutes * 60 ;
+            cout << "Total of seconds: "<< d + h + m + seconds;
+            return 0;
+          
+          }
+          
+## Seconds to Days Hours Minutes Seconds :
+
+          #include <iostream>
+          #include <cmath>
+          using namespace std;
+          int main()
+          {
+            int TotalSeconds ;
+            cout << "Please enter total seconds: " ;
+            cin>> TotalSeconds;
+            
+            const int secondsPerDay =  24 * 60 * 60 ;
+            const int secondsPerHour =  60 * 60 ;
+            const int secondsPerMinute =  60 ;
+          
+            int Remainder = 0 ;
+            cout<< "days = "<< floor(TotalSeconds /secondsPerDay)<< endl; 
+            Remainder = TotalSeconds % secondsPerDay ;
+            cout<< "hours = "<< floor(Remainder /secondsPerHour) << endl; 
+            Remainder = Remainder % secondsPerHour;
+            cout<< "minute = "<< floor(Remainder / secondsPerMinute)<< endl; 
+            Remainder = Remainder % secondsPerMinute;
+            cout<< "second = " << Remainder ;
+            return 0;
+          
+          }
+
