@@ -65,9 +65,104 @@
             cout<< "A = " << A << endl;
             return 0;
           }
+## Assignment Operators :
+          #include <iostream>
+          using namespace std;
+          int main()
+          {
+           
+            int a = 10 , b = 20;
+            a += b ; // a = a + b
+            cout << " a += b " << a << endl;
+            a -= b ; // a = a - b 
+            cout << " a += b " <<a << endl;
+            a *= b;  // a = a * b
+            cout << " a += b " << a << endl;
+            a /= b; // a = a / b
+            cout << " a += b " <<a << endl;
+            a %= b; // a = a / b
+            cout << " a += b " <<a << endl;
+          
+            return 0;
+          
+          }
 
-              
+## Relational Operators :
+
+          #include <iostream>
+          using namespace std;
+          int main()
+          {
+           
+            int a = 10 , b = 20;
+            
+            cout << (a == b ) <<endl;
+            cout << (a != b ) <<endl;
+            cout << (a > b ) <<endl;
+            cout << (a < b ) <<endl;
+            cout << (a >= b ) <<endl;
+            cout << (a <= b ) <<endl;
+            return 0;
+          
+          }
+## Relational 0perateor 2 :
 
 
-
-
+          #include <iostream>
+          using namespace std;
+          int main()
+          {
+           
+                 int a , b;
+                 
+                 cout << "please enter a number" << endl;
+                 cin >> a;
+                 
+                 cout << "please enter b number" << endl;
+                 cin >> b;
+                 
+                 cout << (a == b ) <<endl;
+                 cout << (a != b ) <<endl;
+                 cout << (a > b ) <<endl;
+                 cout << (a < b ) <<endl;
+                 cout << (a >= b ) <<endl;
+                 cout << (a <= b ) <<endl;
+            return 0;
+          
+          }
+## Logical Operators :
+          #include <iostream>
+          using namespace std;
+          int main()
+          {
+            
+            // Task 
+            cout << (12 >= 12)<< endl;
+            cout << !(12 >= 12) << endl;
+            cout << (1 && 1) << endl;
+            cout << (7 == 7  && 7 > 5) << endl;
+            cout << (12 > 7 ) << endl;
+            cout << !(12 < 7 ) << endl;
+            cout << (true && 0 ) << endl;
+            cout << (7 == 7 && 7 < 5) << endl;
+            cout << ( 8 < 6) << endl;
+            cout << !( 8 < 6 ) << endl;
+            cout << ( 0 || 1) << endl;
+            cout << (7 == 7 || 7< 5) << endl;
+            cout << (7 < 7 || 7 > 5) << endl;
+            cout << (8 == 8 ) << endl;
+            cout << !(8 == 8 ) << endl;
+            cout << ( 0 || 0) << endl;
+            cout << ( 12 <= 12 ) << endl;
+            cout << !(12 <= 12) << endl;
+            cout << !(0) << endl;
+            cout << (7 == 7 && 7 > 5) << endl;
+            cout << ( 7 == 5) << endl;
+            cout << ! ( 7 == 5 )<< endl;
+            cout << !(1 || 0) << endl;
+            cout << (7 == 7 && !(7 < 5)) << endl;
+          
+            return 0;
+          
+          }
+##
