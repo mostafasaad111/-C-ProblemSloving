@@ -423,3 +423,397 @@ Task Duration In Seconds:
           
           }
 
+## function code example:
+
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          void DisplayMyCardInfoFunction(){
+            cout<<"*****************************"<<endl;
+            cout<< "Name : Mustafa Sad"<< endl;
+            cout<< "Age : 23 Years"<< endl;
+            cout<< "City : MitGamer"<< endl;
+            cout<< "Country : Egypt"<< endl;
+            cout<<"*****************************"<<endl;
+          }
+          void PrintSquareStarFunction(){
+            cout<<"*******************"<<endl;
+            cout<<"*******************"<<endl;
+            cout<<"*******************"<<endl;
+            cout<<"*******************"<<endl;
+          }
+          void PrintILoveProgrammingFunction(){
+            cout<<"I Love Programming"<<endl;
+            cout<<"I Promise to be the best developer ever1"<<endl;
+            cout<<"I know it will take some time to practice, but I will achieve my goal "<<endl;
+            cout<<"Best Regards, Mohammed Abu-Hahdoud"<<endl;
+          }
+          void PrintH(){
+            cout<<"*      *"<<endl;
+            cout<<"*      *"<<endl;
+            cout<<"********"<<endl;
+            cout<<"*      *"<<endl;
+            cout<<"*      *"<<endl;
+          }
+          int main(){
+            DisplayMyCardInfoFunction();
+            PrintSquareStarFunction();
+            PrintH();
+            PrintILoveProgrammingFunction();
+            return 0;
+          }
+## getLine example code:
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          
+          int main(){
+            // Example for getline() function
+          
+            int number;
+            string name, country;
+          
+            cout<<"Please Enter Your number"<<endl;
+            cin>>number;
+            cout<<"Please Enter Your Name"<<endl;
+            cin.ignore(1,'\n');
+            getline(cin, name);
+            cout<<"Please Enter Your Country"<<endl;
+            cin>>country;
+          
+            cout<<"your Number is: "<<number<<endl;
+            cout<<"your name is: "<<name<<endl;
+            cout<<"your country is: "<<country<<endl;
+            return 0;
+          }
+  ## Function VS Procedure :
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          void MySumProcedure()
+          {
+            int num1, num2;
+            cout << "Please Enter Number1" << endl;
+            cin >> num1;
+            cout << "Please Enter Number2" << endl;
+            cin >> num2;
+            cout << num1 + num2<<endl;
+          }
+          int MySumFunction()
+          {
+            int num1, num2;
+            cout << "Please Enter Number1" << endl;
+            cin >> num1;
+            cout << "Please Enter Number2" << endl;
+            cin >> num2;
+            return num1 + num2;
+          }
+          int main()
+          {
+            MySumProcedure();
+            cout<<MySumFunction() << endl;
+          
+            return 0;
+          }
+## Parameter Function :
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          // parameters functions
+          int MyFunction(int num1, int num2){
+            return num1 * num2;
+          }
+          int main()
+          {
+            // cout<<MyFunction(20 , 30)<<endl;
+            // cout<<MyFunction(40 , 30)<<endl;
+            // cout<<MyFunction(3 , 30)<<endl;
+            // cout<<MyFunction(1 , 30)<<endl;
+          
+            int num1, num2;
+            cin>>num1;
+            cin>>num2;
+            cout<<MyFunction(num1,num2)<<endl;
+            return 0;
+          }
+## Procedure Function Example1 :
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          // parameters functions
+          void MyFunction(){
+            int num1, num2, num3;
+            cout<<"Please Enter Number1"<<endl;
+            cin>>num1;
+            cout<<"Please Enter Number2"<<endl;
+            cin>>num2;
+            
+            cout<<"number1 is: "<<num1<<endl;
+            cout<<"number2 is: "<<num2<<endl;
+          
+            // Swap the two numbers together 
+            num3 = num1;
+            num1 = num2;
+            num2 = num3;
+            cout<<"number1 is: "<<num1<<endl;
+            cout<<"number2 is: "<<num2<<endl;
+            
+          }
+          int main()
+          {
+            MyFunction();
+            
+            return 0;
+          }
+## Function Example2:
+## Calculate Area Rectangle:
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          // parameters functions
+          int MyFunction(int a , int b){
+            return a*b;
+          }
+          int main()
+          {
+            int a,b;
+            cout<<"Please Enter a Value"<<endl;
+            cin>>a; 
+            cout<<"Please Enter b Value"<<endl;
+            cin>>b;
+            
+            cout<<"Area = "<<MyFunction(a,b)<<endl ; 
+            return 0;
+          }
+## Function Example3:
+## Calculate Rectangle Area through Diagonal and side area:
+
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          // parameters functions
+          int AreaFunction(int a, int d)
+          {
+            return a * sqrt(pow(d, 2) - pow(a, 2));
+          }
+          int main()
+          {
+            int a, d;
+            cout << "Please Enter a Value" << endl;
+            cin >> a;
+            cout << "Please Enter d Value" << endl;
+            cin >> d;
+          
+            cout<<"Result of Area = "<< AreaFunction(a,d)<<endl;
+            return 0;
+          }
+## Function Example 3:
+## Calculate circle area:
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          // parameters functions
+          void CircleFunction(){
+            int r, Area;
+            cout<<"Please Enter r Value"<<endl;
+            cin>>r;
+          
+            Area = 3.14 * pow(r,2);
+            cout<<"Area = "<<Area<<endl;
+          }
+          int main()
+          {
+            CircleFunction();
+            return 0;
+          }
+## Function Example4:
+## Calculate circle area:
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          // parameters functions
+          int CircleFunction(int d){
+            return (3.14 * pow(d,2)) / 4;
+          }
+          
+          int main()
+          {  
+            int d;
+            cout<<"Please Enter d value: "<<endl;
+            cin>>d;
+            cout<<"Area = "<<CircleFunction(d)<<endl;
+            return 0;
+          }
+## Procedure function example4:
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          // parameters procedure function
+          void CircleFunction(){
+            int a;
+            cout<<"Please Enter A value:"<<endl;
+            cin>>a ;
+            cout<<"Area = "<<(3.14* pow(a,2))/4<<endl;
+          
+          }
+          int main()
+          {  
+            CircleFunction();
+            return 0;
+          }
+## circle area function example:
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          // parameters procedure function
+          int CircleFunction(int l ){
+            return pow(l,2) /(4*3.14 );
+          }
+          int main()
+          {  
+            int l;
+            cout<<"Please Enter L value"<<endl;
+            cin>>l;
+            cout<<"area = "<<CircleFunction(l)<<endl;
+            return 0;
+          }
+
+## Calculate Circle Area :
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          // parameters procedure function
+          int AreaFunction(int a , int b ){
+            return 3.14 *( pow(b,2)/4)*((2*a-b)/(2*a+b));
+          }
+          int main()
+          {  
+            int b, a; 
+            cout<<"Please Enter a value: "<<endl;
+            cin>>a;
+            cout<<"Please Enter b value: "<<endl;
+            cin>>b;
+            cout<<"value= "<<AreaFunction(a,b)<<endl;
+          
+            return 0;
+          }
+## function code Example 5:
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          // parameters procedure function
+          double AreaFunction(int a, int b, int c)
+          {
+            double p = (a + b + c) / 2;
+            double h = sqrt(p * (p - a) * (p - b) * (p - c));
+            return 3.14 * (pow((a * b * c) /( 4 * h), 2));
+          }
+          int main()
+          {
+            int a, b, c;
+            cout << "Please Enter a and b and c values" << endl;
+            cin >> a >> b >> c;
+          
+            cout << "Values: " << AreaFunction(a, b, c) << endl;
+            return 0;
+          }
+## task pow(x,x) example:
+
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          // parameters procedure function
+          void task-function(){
+            int num;
+            cout<<"Please Enter number: "<<endl;
+            cin>>num;
+            cout<<"Number^2 = "<<pow(num,2 )<<endl;
+            cout<<"Number^3 = "<<pow(num,3 )<<endl;
+            cout<<"Number^4 = "<<pow(num,4 )<<endl;
+          }
+          int main()
+          {
+            task-Function();
+            return 0;
+          }
+          ****
+
+## Example function for calculating the day and hours & minutes and seconds :
+          void TimeFunction()
+          {
+            int total_seconds;
+            int remainder = 0;
+            const int  second_per_day = 24 * 60 * 60;
+            const int  second_per_hour = 60 * 60;
+            const int  second_per_minutes = 60;
+          
+            cout << "Please Enter TotalOF Seconds: " << endl;
+            cin >> total_seconds;
+          
+            cout<<"days = "<<floor(total_seconds / second_per_day)<<endl;
+            remainder = total_seconds % second_per_day;
+          
+            cout<<"hours = "<<floor( remainder / second_per_hour)<<endl;
+            remainder = total_seconds % second_per_hour;
+          
+            cout<<"minute = "<< floor(remainder / second_per_minutes)<<endl;
+            remainder = remainder % second_per_minutes;
+            
+            cout<<"second = "<< remainder ;
+          }
+          int main()
+          {
+            TimeFunction();
+            return 0;
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
