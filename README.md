@@ -794,19 +794,200 @@ Task Duration In Seconds:
             TimeFunction();
             return 0;
           }
+## local vs global:
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          int x = 600; // global scope
+          
+          void MyFunction(){ //procedure function
+            int x= 400;
+            cout<<"the local value is: "<<x<<endl;
+          }
+          
+          int main(){
+            int x = 300;
+            cout<<"the local value is: "<<x<<endl;
+            
+            ::x++;
+            cout<<"the global value is: "<<::x<<endl;
+          }
+## by value VS by reference:
 
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          void MyFunction(int num1){
+            cout<<"num1: "<<num1<<endl;
+            num1 = 7000;
+            cout<<"num1: "<<num1<<endl;
+          
+          }
+          int main(){
+            int num1 = 1000;
+            MyFunction(num1);
+            cout<<"num1: "<<num1<<endl;
+          }
+*********************************************************
 
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          void MyFunction(int &num1){
+            cout<<"num1: "<<num1<<endl;
+            num1 = 7000;
+            cout<<"num1: "<<num1<<endl;
+          
+          }
+          int main(){
+            int num1 = 1000;
+            cout<<"num1: "<<num1<<endl;
+            MyFunction(num1);
+            cout<<"num1: "<<num1<<endl;
+            cout<<"num1 address = "<<&num1<<endl;
+          }****
 
+## Swap function :
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          void Swap(int &num1, int &num2)
+          {
+            cout << "Procedure num1 = " << num1 << "Procedure num2 = " << num2 << endl;
+            int temp;
+            temp = num1;
+            num1 = num2;
+            num2 = temp;
+            cout << "Procedure num1 = " << num1 << "Procedure num2 = " << num2 << endl;
+          }
+          int main()
+          {
+            int num1, num2;
+          
+            cout << "Please Enter Number1 = " << endl;
+            cin >> num1;
+          
+            cout << "Please Enter Number1 = " << endl;
+            cin >> num2;
+          
+            cout << "Before Swap num1 = " << num1 << " , num2 = " << num2 << endl;
+          
+            swap(num1, num2);
+            cout << "After Swap inside main the function num1 = " << num1 << " , num2 = " << num2 << endl;
+          
+            return 0;
+          }
 
+## Structure and Function example:
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          // structure and function 
+          struct strinfo{
+            string FirstName;
+            string LastName;
+            int Age;
+            string phone;
+          };
+          void ReadInfo(strinfo &info){
+            cout<<"Please Enter First Name: "<<endl;
+            cin>>info.FirstName;
+          
+            cout<<"Please Enter Last Name: "<<endl;
+            cin>>info.LastName;
+          
+            cout<<"Please Enter your age: "<<endl;
+            cin>>info.Age;
+          
+            cout<<"Please Enter your phone number: "<<endl;
+            cin>>info.phone;
+          
+          };
+          void PrintInfo(strinfo info){
+          
+            cout<<"\n*****************************\n"<<endl;
+            cout<<"first name: "<<info.FirstName<<endl;
+            cout<<"last name: "<<info.LastName<<endl;
+            cout<<"phone number: "<<info.phone<<endl;
+            cout<<"age : "<<info.Age<<endl;
+            cout<<"\n*****************************\n"<<endl;
+          
+          };
+          int main()
+          {
+            strinfo person1Info;
+            ReadInfo(person1Info);
+            PrintInfo(person1Info);
+          
+            strinfo person2Info;
+            ReadInfo(person2Info);
+            PrintInfo(person2Info);
+            return 0;
+          }
 
+## array example:
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int main()
+          {
+            int x[5] = {23,44,55,23,56};
+            cout<<x[0]<<" "<<x[1]<<" "<<x[2]<<endl;
+            cout<<x[0]<<endl;
+            cout<<x[1]<<endl;
+            cout<<x[2]<<endl;
+            cout<<x[3]<<endl;
+            cout<<x[2] + x[4]<<endl;
+            
+            int i[4];
+            i[0]= 30;
+            i[1]=40;
+            cout<< i[0] + i[1]<<endl;
+            return 0;
+          }
 
-
-
-
-
-
-
-
+## Array Example 2:
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          struct StrArray_Value{
+            float x[3];
+          };
+          void ReadArrayValue(StrArray_Value &array){
+            cout<<"Please Enter Grade1: "<<endl;
+            cin>>array.x[0];
+            
+            cout<<"Please Enter Grade2: "<<endl;
+            cin>>array.x[1];
+          
+            cout<<"Please Enter Grade3: "<<endl;
+            cin>>array.x[2];  
+          
+          };
+          void PrintArrayValue(StrArray_Value array){
+            float average = (array.x[0] + array.x[1] + array.x[2]) /3;
+            cout<<"The average of grades is : "<< average <<endl;
+          };
+          int main()
+          {
+            StrArray_Value array1;
+            ReadArrayValue(array1);
+            PrintArrayValue(array1);
+            return 0;
+          }
 
 
 
