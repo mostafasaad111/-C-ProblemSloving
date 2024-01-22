@@ -989,6 +989,177 @@ Task Duration In Seconds:
             return 0;
           }
 
+## Write a program to ask the user to enter age if the age is between 18 and 45 print "valid Age" otherwise print "invalid Age":
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int main()
+          {
+            int age ;
+            cout<<"Please enter age: "<<endl;
+            cin>>age;
+            if(age >=18 && age <= 45)
+            {
+                cout<<"Valid Age: "<<endl;
+            }
+            else{
+              cout<<"Invalid Age: "<<endl;
+            }
+            return 0;
+          }
+## Write a program to read the ATM PIN code from the user :
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int main()
+          {
+            int pinCode ;
+            cout<<"Please Enter pin Code"<<endl;
+            con>>pinCode;
+          
+            if(pinCode == 1234){
+              cout<<'7500';
+            }
+            else{
+              cout<<"Wong Ping"<<endl;
+            }
+            return 0;
+          }
+## Write a program to ask the user to enter Grade:
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int main()
+          {
+            int Grade;
+            cout<<"Please enter a grade number: "<<endl;
+            cin>>Grade;
+            if(Grade >= 90 || Grade <= 100)
+            {
+              cout<<"A";
+            }
+            else if (Grade >= 80 || Grade <= 89)
+            {
+              cout<<"B";
+            }
+            else if (Grade >= 70 || Grade <=79)
+            {
+              cout<<"C";
+            }
+            else 
+            {
+              cout <<"F";
+            }
+            return 0;
+          }
+## Write a program to ask the user to enter TotalSales:
+
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int main()
+          {
+            int Total_Sales_Amount;
+            cout << "Please Enter Total_Sales_Amount:" << endl;
+            cin >> Total_Sales_Amount;
+          
+            if (Total_Sales_Amount >= 1000000)
+            {
+              int value;
+              value = Total_Sales_Amount * .01;
+              cout << "the value = " << value;
+            }
+            else if (Total_Sales_Amount <= 1000000 || Total_Sales_Amount > 500000)
+            {
+              int value;
+              value = Total_Sales_Amount * .02;
+              cout << "the value = " << value;
+            }
+            else if (Total_Sales_Amount <= 500000 || Total_Sales_Amount > 100000)
+            {
+              int value;
+              value = Total_Sales_Amount * .03;
+              cout << "the value = " << value;
+            }
+            else if (Total_Sales_Amount <= 100000 || Total_Sales_Amount > 50000)
+            {
+              int value;
+              value = Total_Sales_Amount * .05;
+              cout << "the value = " << value;
+            }
+            else
+            {
+              cout << "the value = " << 0;
+            }
+            return 0;
+          }
+## Write a program to ask the user to enter :
+ . number1
+ . number2
+ . operation type
+ 
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int main()
+          {
+            int num1, num2;
+            char operation_type;
+            cout << "Please enter num1 " << endl;
+            cin >> num1;
+            cout << "Please enter num2 " << endl;
+            cin >> num2;
+            cout << "Please enter operation_type " << endl;
+            cin >> operation_type;
+          
+            if (operation_type == '+')
+            {
+              cout << "sum = " << num1 + num2 << endl;
+            }
+            else if (operation_type == '-' )
+            {
+              cout << "sum = " << num1 - num2 << endl;
+            }
+            else if (operation_type == '*')
+            {
+              cout << "sum = " << num1 * num2 << endl;
+            }
+            else if (operation_type == '/')
+            {
+              cout << "sum = " << num1 / num2 << endl;
+            }
+          
+            return 0;
+          }
+
+## 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
