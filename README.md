@@ -1142,7 +1142,618 @@ Task Duration In Seconds:
             return 0;
           }
 
-## 
+## Write a program to ask the user to enter:
+. Day
+
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int main()
+          {
+            int Day;
+            cout<<"Please enter a number between 1 and 7: "<<endl;
+            cin>>Day;
+          
+            if (Day == 1)
+            {
+              cout << "Sunday" << endl;
+            }
+            else if (Day == 2)
+            {
+              cout << "Monday" << endl;
+            }
+            else if (Day == 3)
+            {
+              cout << "Tuesday" << endl;
+            }
+            else if (Day == 5)
+            {
+              cout << "Thursday" << endl;
+            }
+            else if (Day == 6)
+            {
+              cout << "Friday" << endl;
+            }
+            else if (Day == 7)
+            {
+              cout << "Saturday" << endl;
+            }
+            else
+            {
+              cout << "Wrong Day" << endl;
+            }
+            return 0;
+          }
+## enum with if statement:
+
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          enum enScreenColor  {red = 1, blue = 2, green = 3, yellow = 4};
+          int main()
+          {
+            cout << "**********************\n";
+            cout << "Please chose the number \n";
+            cout << "(1) red \n";
+            cout << "(2) blue \n";
+            cout << "(3) green \n";
+            cout << "(4) yellow \n";
+            cout << "**********************\n";
+          
+            int c;
+            enScreenColor color;
+          
+            cin >> c;
+            color = (enScreenColor)c;
+            if (color == enScreenColor::red)
+            {
+              system("color 4F");
+            }
+            else if (color == enScreenColor::blue)
+            {
+              system("color 1F");
+            }
+            else if (color == enScreenColor::yellow)
+            {
+              system("color 6F");
+            }
+            else if (color == enScreenColor::green)
+            {
+              system("color 2F");
+            }
+          
+            return 0;
+          }
+##example 2:
+
+                         #include <iostream>
+                         #include <string>
+                         #include <cmath>
+                         using namespace std;
+                         enum enCountryChoice
+                         {
+                           Jordan = 1,
+                           Tunisia = 2,
+                           Algeria = 3,
+                           Oman = 4,
+                           Egypt = 5,
+                           Iraq = 6,
+                           other = 7
+                         };
+                         int main()
+                         {
+                           cout<< "********************************\n";
+                           cout<< "Please chose the number \n";
+                           cout<< "(1) jordan\n";
+                           cout<< "(2) tunisa\n";
+                           cout<< "(3) algeria\n";
+                           cout<< "(4) oman\n";
+                           cout << "(5) egypt\n";
+                           cout << "(6) iraq\n";
+                           cout << "(7) other\n";
+                           cout << "*********************************\n";
+                           int c;
+                           cin>>c;
+                           enCountryChoice country;
+                           country = (enCountryChoice)c;
+                           if (country == enCountryChoice::jordan)
+                           {
+                             cout << "your country is Jordan\n";
+                           }
+                           else if (country == enCountryChoice::egypt)
+                           {
+                             cout << "your country is egypt\n";
+                           }
+                           else if (country == enCountryChoice::tunisa)
+                           {
+                             cout << "your country is tunisa\n";
+                           }
+                           else if (country == enCountryChoice::algeria)
+                           {
+                             cout << "your country is algeria\n";
+                           }
+                           else if (country == enCountryChoice::iraq)
+                           {
+                             cout << "your country is iraq\n";
+                           }
+                           else if (country == enCountryChoice::oman)
+                           {
+                             cout << "your country is oman\n";
+                           }
+                           else
+                           {
+                             cout << "your country not found\n";
+                           }
+                           return 0;
+                         }
+                                   
+## swicth_case():
+               #include <iostream>
+               #include <string>
+               #include <cmath>
+               using namespace std;
+               
+               int main()
+               {
+                 int day;
+                 cout<<"Please enter a day"<<endl;
+                 cin >> day;
+                 
+                 switch (day)
+                 {
+                 case 1:
+                   cout<<"sun\n";
+                   break;
+                 case 2:
+                   cout<<"Monday\n";
+                   break;
+                 case 3:
+                   cout<<"Tuesday\n";
+                   break;
+                 case 4:
+                   cout<<"Wednesday\n";
+                   break;
+                 case 5:
+                   cout<<"Thursday\n";
+                   break;
+                 case 6:
+                   cout<<"Friday\n";
+                   break;
+                 case 7:
+                   cout<<"Saturday\n";
+                   break;
+                 default:
+                   break;
+                 }
+                 
+                 return 0;
+               }
+## enum switch case example:
+          
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          enum enScreenColor
+          {
+            red = 1,
+            green = 2,
+            blue = 3,
+            yellow = 4
+          };
+          void printScreen()
+          {
+            cout << "********************\n";
+            cout << "Please choose a color: " << endl;
+            cout << "(1)red \n";
+            cout << "(2)green \n";
+            cout << "(3)blue \n";
+            cout << "(4)yellow \n";
+            cout << "********************\n";
+          }
+          int main()
+          {
+            PrintScreen();
+            int c;
+            cin >> c;
+            enScreenColor color;
+            color = (enScreenColor)c;
+          
+            switch (color)
+            {
+            case enScreenColor::red:
+              system("color 4f");
+              break;
+            case enScreenColor::blue:
+              system("color 1f");
+              break;
+            case enScreenColor::green:
+              system("color 2f");
+              break;
+            case enScreenColor::yellow:
+              system("color 6f");
+              break;
+          
+              system("color 4f");
+              break;
+            }
+            return 0;
+          }
+## Nested Function enum example:
+          #include <iostream>
+          #include<string>
+          #include <cmath>
+          using namespace std;
+          enum enWeekDay{sun=1,mon=2,tue=3,wed=4,thu=5,fri=6 ,sat=7};
+          
+          void PrintScreen(){
+            cout<<"================\n";
+            cout<<"     weekday    \n";
+            cout<<"================\n";
+            cout<<"1: sunday"<<endl;
+            cout<<"2: Monday"<<endl;
+            cout<<"3: Tuesday"<<endl;
+            cout<<"4: Wednesday"<<endl;
+            cout<<"5: Thursday"<<endl;
+            cout<<"6: Friday"<<endl;
+            cout<<"7: Saturday"<<endl;
+            cout<<"choose your day"<<endl;
+          }
+          enWeekDay ReadWeekDay(){
+            enWeekDay WeekDay;
+            int wd;
+            cin>>wd;
+            return (enWeekDay)wd;
+          
+          }
+          string GetWeekDay(enWeekDay WeekDay){
+            switch(WeekDay){
+              case enWeekDay::fri:
+                return "Fri";
+                break;
+              case enWeekDay::thu:
+                return "thu";
+                break;
+              case enWeekDay::tue:
+                return "Tue";
+                break;
+              case enWeekDay::wed:
+                return "Wed";
+                break;
+              case enWeekDay::mon:
+                return "monday";
+                break;
+              case enWeekDay::sat:
+                return "tuesday";
+                break;
+              case enWeekDay::sun:
+                return "saturday";
+                break;
+            
+          }
+          }
+          int main(){
+            PrintScreen();
+            cout<<"today is: "<<GetWeekDay(ReadWeekDay())<<endl;
+          }
+          
+## Write a program to print numbers from 1 to n:
+
+               #include <iostream>
+               #include <string>
+               #include <cmath>
+               using namespace std;
+               
+               int main()
+               {
+                 cout << "please enter number \n";
+                 int b;
+                 cin >> b;
+                 for (int i; i <= b; i++)
+                 {
+                   cout << i<<endl;
+                 }
+                 return 0;
+               }
+## Write a program to print numbers from n to 0:
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int main()
+          {
+            cout << "please enter number \n";
+            int n;
+            cin >> n;
+            for (int i=n; i >= 0 ; i--)
+            {
+              cout << i<<endl;
+            }
+            return 0;
+          }
+
+## Write a program to sum odd numbers from 1 to N:
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int main()
+          {
+            cout << "please enter number \n";
+            int n;
+            int sum = 0;
+            cin >> n;
+            for (int i = 1; i <= n; i++)
+            {
+              if (i % 2 != 0)
+              {
+                sum = sum + i;
+              }
+            }
+            cout << "sum of odd numbers from 1 to n = " << n << " is: " << sum << endl;
+            return 0;
+          }
+## Write a program to sum even numbers from 1 to N:
+               #include <iostream>
+               #include <string>
+               #include <cmath>
+               using namespace std;
+               
+               int main()
+               {
+                 cout << "please enter number \n";
+                 int n;
+                 int sum = 0;
+                 cin >> n;
+                 for (int i = 2; i <= n; i = i + 2)
+                 {
+                    sum += i;
+                 }
+                 cout << "sum of odd numbers from 1 to n = " << n << " is: " << sum << endl;
+                 return 0;
+               }
+               
+## Write a program to calculate factorial of N!:
+               #include <iostream>
+               #include <string>
+               #include <cmath>
+               using namespace std;
+               
+               int main()
+               {
+                 int sum = 1;
+                 for (int i=6 ; i > 0  ; i--)
+                 {
+                    sum *= i;
+                 }
+                 cout << "sum of odd numbers from 1 to n = " << sum << endl;
+                 return 0;
+               }
+## Write a program print char from a to z :
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int main()
+          {
+            for(int i = 65 ; i <= 90 ; i++){
+              cout<<char(i)<<endl;
+            }
+            return 0;
+          }
+## Loop & Array Example:
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          void ReadArrayData(int Arr1[100], int &length)
+          {
+            cout << "Please enter a number of elements:\n";
+            cin >> length;
+          
+            for (int i = 0; i <= length - 1; i++)
+            {
+              cout << "please enter number" << i + 1 << endl;
+              cin >> Arr1[i];
+            }
+          }
+          void printArrayData(int Arr1[100], int length)
+          {
+            for (int i = 0; i <= length - 1; i++)
+            {
+              cout << "number [" << i + 1 << "]: " << Arr1[i] << endl;
+            }
+          }
+          int CalculateArraySum(int Arr1[100], int length)
+          {
+            int sum;
+            for (int i = 0; i <= length - 1; i++)
+            {
+              sum += Arr1[i];
+            }
+            return sum;
+          }
+          float CalculateArrayAverage(int Arr1[100], int length)
+          {
+            for (int i = 0; i <= length - 1; i++)
+            {
+              return (float)CalculateArraySum(Arr1, length)/length;
+            }
+          }
+          int main()
+          {
+            int Arr1[100], length = 0;
+            ReadArrayData(Arr1, length);
+            printArrayData(Arr1, length);
+          
+            cout<<"\n************************\n";
+            int sum;
+            sum =CalculateArraySum(Arr1,length);
+          
+            cout<<"sum = "<<sum<<endl;
+            cout<<"average = "<<sum / length<<endl;
+            return 0;
+          }
+ ## loop Print AA TO ZZ:
+           #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int main()
+          {
+            for (int i = 65; i <= 90; i++)
+            {
+              cout  << char(i) << endl;
+              for (int j = 65; j <= 90; j++)
+              {
+                cout <<char(i)<<char(j) << endl;
+              }
+              cout<<"----------------"<<endl;
+            }
+          }
+          
+## Print the shape:
+*************
+***********
+*********
+*******
+*****
+***
+**
+*
+
+               int main()
+               {
+                 for (int i = 1; i <= 10; i++)
+                 {
+                   for (int j = 10; j >= i; j--)
+                   {
+                     cout << "*" ;
+                   }
+                   cout<<endl;
+                 }
+               }
+## Print The Shape:
+12345678910
+123456789
+12345678
+1234567
+123456
+12345
+1234
+123
+12
+1
+
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int main()
+          {
+            for (int i = 10; i >= 1; i--)
+            {
+            
+              for (int j = 1; j <= i; j++)
+              {
+                cout << j ;
+              }
+              cout<<endl;
+            }
+          }
+## Print The Shape:
+A
+AB
+ABC
+ABCD
+ABCDE
+ABCDEF
+          
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int main()
+          {
+            for (int i = 65; i <= 70; i++)
+            {
+            
+              for (int j = 65; j <= i; j++)
+              {
+                cout << char(j) ;
+              }
+              cout<<endl;
+            }
+          }
+## Print The Shape:
+1
+12
+123
+1234
+12345
+123456
+1234567
+12345678
+123456789
+12345678910
+
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int main()
+          {
+            for (int i = 1; i <= 10; i++)
+            {
+            
+              for (int j = 1; j <= i; j++)
+              {
+                cout << j ;
+              }
+              cout<<endl;
+            }
+          }
+
+## Print The Shape:
+12345678910
+2345678910
+345678910
+45678910
+5678910
+678910
+78910
+8910
+910
+10
+
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int main()
+          {
+            for (int i = 1; i <= 10; i++)
+            {
+          
+              for (int j = i; j <= 10; j++)
+              {
+                cout << j;
+              }
+              cout << endl;
+            }
+          }
 
 
 
@@ -1160,6 +1771,13 @@ Task Duration In Seconds:
 
 
 
+
+
+
+
+
+
+               
 
 
 
