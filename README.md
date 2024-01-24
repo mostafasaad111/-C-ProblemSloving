@@ -1755,17 +1755,135 @@ ABCDEF
             }
           }
 
+## While LOOP Example1:
 
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int main()
+          {
+            int i = 1;
+            while (i <= 5)
+            {
+              cout << i << "\n";
+              i++;
+            }
+          }
+## While LOOP Example:
 
+         #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int main()
+          {
+            int Number ;
+            cout<<"Please enter a positive number."<<endl;
+            cin>>Number;
+            while(Number <0){
+              cout<<"Please enter a positive number."<<endl;
+              cin>>Number;
+            }
+            cout<<"\n the number positive number is "<<Number<<endl;
+          }
 
+## While LOOP Example 2 :
 
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          int ReadIntNum(int From, int To)
+          {
+            int Number;
+            cout << "Please enter number From" << From << " to " << To << endl;
+            cin >> Number;
+          
+            while (Number < From || Number > To)
+            {
+              cout << "Wrong Number" << endl;
+              cout << "Please enter number From" << From << " to " << To << endl;
+              cin >> Number;
+            }
+            return Number;
+          }
+          int main()
+          {
+            cout<<"\n The Number Is :" << ReadIntNum(18,45)<<endl;
+            return 0;
+          }
+## Write a program to print numbers From 1 to N:
 
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          int UserInput(int num)
+          {
+            int x = 1;
+            cout << "Please enter a number: " << endl;
+            cin >> num;
+            while (x <= num)
+            {
+              cout << x << endl;
+              x++;
+            }
+          }
+          int main()
+          {
+            int num;
+            cout<<UserInput(num);
+            return 0;
+          }
+## by Using While Loop Write a program to print numbers from 1 to N:
 
+               #include <iostream>
+               #include <string>
+               #include <cmath>
+               using namespace std;
+               int UserInput(int num)
+               {
+                 int x = 1;
+                 cout << "Please enter a number: " << endl;
+                 cin >> num;
+                 while (x <= num)
+                 {
+                   cout << x << endl;
+                   x++;
+                 }
+               }
+               int main()
+               {
+                 int num;
+                 cout<<UserInput(num);
+                 return 0;
+               }
+## by Using While Loop Write a program to print numbers from N to 1:
 
-
-
-
-
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          int UserInput(int num)
+          {
+            int x = 1;
+            cout << "Please enter a number: " << endl;
+            cin >> num;
+            while (x <= num)
+            {
+              cout << num << endl;
+              num--;
+            }
+          }
+          int main()
+          {
+            int num;
+            cout<<UserInput(num);
+            return 0;
+          }
 
 
 
