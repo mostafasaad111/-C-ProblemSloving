@@ -1935,9 +1935,62 @@ ABCDEF
                  UserInput();
                  return 0;
                }
+## Write a program to calculate the factorial of N! (by using the While loop):
+          
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          int CalculateFactorialNumber(){
+            int number;
+            cout<<"Please enter some factors\n";
+            cin>>number;
+            int x = 1;
+            int sum = 1;
+          
+            while(x <= number){
+              cout<<number<<endl;
+              sum *=number;
+              number--;
+            }
+            cout<<"sum = "<<sum<<endl;
+          }
+          int main()
+          {
+            CalculateFactorialNumber();
+            return 0;
+          }
+
+## Write a program to ask the user to enter (by using the While loop): 
+. Number 
+. M 
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          int CalculatePowerOfM()
+          {
+            int base, power;
+            cout << "please enter base :" << endl;
+            cin >> base;
+            cout << "please enter power :" << endl;
+            cin >> power;
+          
+            int x = 1;
+            int sum = 1;
+            while (x <= power)
+            {
+              sum *= base;
+              power--;
+            }
+            cout << "sum = " << sum << endl;
+          }
+          int main()
+          {
+            CalculatePowerOfM();
+            return 0;
+          }
 ## 
-
-
 
 
 
