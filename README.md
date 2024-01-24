@@ -1884,9 +1884,58 @@ ABCDEF
             cout<<UserInput(num);
             return 0;
           }
+## Write a program to Sum odd numbers from 1 to N (by using a while loop):
 
-
-
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int main()
+          {
+            int number;
+            cout << "Please enter number " << endl;
+            cin >> number;
+            int sum = 0;
+            int x = 1;
+            while (x <= number)
+            {
+              if (x % 2 != 0)
+              {
+                sum += x;
+              }
+              x++;
+            }
+            cout << "sum = " << sum << endl;
+            return 0;
+          }
+   ## Write a program to Sum even numbers from 1 to N (by using a while loop):
+               #include <iostream>
+               #include <string>
+               #include <cmath>
+               using namespace std;
+               int UserInput(){
+                   int number;
+                 cout << "Please enter number " << endl;
+                 cin >> number;
+                 int sum = 0;
+                 int x = 1;
+                 while (x <= number)
+                 {
+                   if (x % 2 == 0)
+                   {
+                     sum += x;
+                   }
+                   x++;
+                 }
+                 cout << "sum = " << sum << endl;
+               }
+               int main()
+               {
+                 UserInput();
+                 return 0;
+               }
+## 
 
 
 
