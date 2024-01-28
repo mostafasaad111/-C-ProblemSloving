@@ -1990,14 +1990,523 @@ ABCDEF
             CalculatePowerOfM();
             return 0;
           }
-## 
+## Write a program to read numbers from the user and sum them, keep reading until the user enters -99 then print the Sum on the Screen. 
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          int CalculateNumber()
+          {
+            int number;
+            int sum = 0;
+            while (number != -99)
+            {
+              cout << "Please enter number" << endl;
+              cin >> number;
+              sum += number;
+            }
+            cout << "sum = " << sum + 99 << endl;
+          }
+          int main()
+          {
+            CalculateNumber();
+            return 0;
+          }
 
+## Write a program to print all letters A to Z (by using While Loop):
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          int PrintLetter()
+          {
+            int x = 65;
+            int y = 90;
+            while (x <= y)
+            {
+              cout << char(x) << endl;
+              x++;
+            }
+          }
+          int main()
+          {
+            PrintLetter();
+            return 0;
+          }
+## Write a program Atm At the request of the user, he enters the password. If the number of attempts is more than three times, he will not be able to enter the password again:
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          void AtmPinCode()
+          {
+              int PinCode;
+              int maxAttempts = 3;  // Set the maximum number of attempts
+              cout << "Please enter a pin code: " << endl;
+          
+              while (maxAttempts > 0)
+              {     
+                  cin >> PinCode;
+          
+                  if (PinCode == 1234)
+                  {
+                      cout << "Your Balance is: 7500" << endl;
+                      break;
+                  }
+                  else
+                  {
+                      cout << "Incorrect pin code. " << maxAttempts - 1 << " attempts remaining." << endl;
+                      maxAttempts--;
+          
+                      if (maxAttempts == 0)
+                      {
+                          cout << "Card is locked." << endl;
+                          break;
+                      }
+          
+                      cout << "Please enter a pin code: " << endl;
+                  }
+              }
+          }
 
+int main()
+{
+    AtmPinCode();
+    return 0;
+}
 
+## Write a program print number form to the number the user entered:
 
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          int ReadIntNum(int from , int to){
+            int number;
+            do{
+              cout<<"Please enter a number "<<from <<" and "<<to<<":"<<endl;
+              cin>>number;
+          
+            }while(number < from || number > to );
+            return number;
+          }
+          int main()
+          {
+            cout<<"\n the number your entered is: "<<  ReadIntNum(18 , 45);
+            return 0;
+          }
+## Break Example:
 
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          void print_number()
+          {
+            int i;
+            int arr[10] = {10, 44, 55, 33, 22, 99, 88, 20, 99, 100};
+            for (int i = 0; i < 10; i++)
+            {
+              if (arr[i] == 20)
+              {
+                break;
+              }
+              cout << arr[i] << "  \n";
+            }
+          }
+          int main()
+          {
+            print_Number();
+            return 0;
+          }
 
-               
+## Continue Example:
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          void print_Number()
+          {
+            int i;
+            int sum;
+            int arr[5] = {10, 20, 55, 10, 20};
+            for (i = 0; i < 5; i++)
+            {
+              if (arr[i] > 50)
+              {
+                continue;
+              }
+              sum += arr[i];
+            }
+            cout<<"sum = "<<sum<<endl;
+          }
+          int main()
+          {
+            print_Number();
+            return 0;
+          }
+   ## Write a program that asks the user to enter your name :
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          string ReadName()
+          {
+            string name;
+            cout << "Please enter your name: " << endl;
+            getline(cin, name);
+            return name;
+          }
+          void PrintName(string name)
+          {
+            cout << "your name is: " << name << endl;
+          }
+          int main()
+          {
+            PrintName(ReadName());
+          }
+## Write a program to check Odd or Even Number:
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int ReadNumber()
+          {
+            int number;
+            cout << "Please enter a number" << endl;
+            cin >> number;
+            return number;
+          }
+          void PrintNumber(int number)
+          {
+            if (number % 2 == 0)
+            {
+              cout << "your number is even" << endl;
+            }else{
+              cout << "your number is odd" << endl;
+            }
+          }
+          int main()
+          {
+            PrintNumber(ReadNumber());
+          }
+## Write a program to check Odd or Even Number Another solution:
+
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          enum enNumberType
+          {
+            odd = 1,
+            even = 2
+          };
+          
+          int ReadNumber()
+          {
+            int num;
+            cout << "Please enter a number." << endl;
+            cin >> num;
+            return num;
+          }
+          
+          enNumberType CheckNumberType(int num)
+          {
+            int Result = num % 2;
+            if (Result == 0)
+              return enNumberType::even;
+            else
+              return enNumberType::odd;
+          }
+          
+          void PrintNumberType(enNumberType numberType)
+          {
+            if (numberType == enNumberType::even)
+              cout << "\n number is even. \n";
+            else
+              cout << "\n number is odd. \n";
+          }
+          int main()
+          {
+            PrintNumberType(CheckNumberType(ReadNumber()));
+            return 0;
+          }
+## Write a progam ask the user , do you have a Driver_licesnes && Age , do you have a Recommendation::
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          struct stInfo
+          {
+            int age;
+            bool HasRecommendation;
+            bool HasDriver_license;
+          };
+          
+          stInfo ReadInfo()
+          {
+            stInfo info;
+          
+            cout << "Please enter your age: " << endl;
+            cin >> info.age;
+          
+            cout << "Please enter your Driver_license(true or false): " << endl;
+            cin >> info.HasDriver_license;
+          
+            cout << "you have HasRecommendation (true or false): " << endl;
+            cin >> info.HasRecommendation;
+          
+            return info;
+          }
+          bool IsAccepted(stInfo info)
+          {
+            if (info.HasRecommendation)
+            {
+              return true;
+            }
+            else
+            {
+              return (info.age > 21 && info.HasDriver_license);
+            }
+          };
+          void PrintUserData(stInfo info)
+          {
+            if (IsAccepted(info))
+            {
+              cout << "\n Hired"<<endl;
+            }
+            else
+            {
+              cout << "\n Rejected"<<endl;
+            }
+          }
+          
+          int main()
+          {
+          
+            PrintUserData(ReadInfo());
+            return 0;
+          }
+## Write a program ask user enter FirstNmae && LastName:
+
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          struct stInfo
+          {
+            string FirstName;
+            string LastName;
+          };
+          stInfo ReadInfo()
+          {
+            stInfo info;
+            cout << "Please enter first_name: " << endl;
+            cin >> info.FirstName;
+          
+            cout << "Please enter Last_Name: " << endl;
+            cin >> info.LastName;
+          
+            return info;
+          }
+          string GetFullName(stInfo info)
+          {
+            string fullname = "";
+            fullname = info.FirstName + " " + info.LastName;
+            return fullname;
+          }
+          void PrintInfo(string  fullname)
+          {
+            cout << "your name is: " << fullname << endl;
+          }
+          int main()
+          {
+            PrintInfo(GetFullName(ReadInfo()));
+            return 0;
+          }
+## Write a program and ask the user to enter the number and divide it / 2:
+               #include <iostream>
+               #include <string>
+               #include <cmath>
+               using namespace std;
+               struct stNumber
+               {
+                 int number;
+               };
+               stNumber ReadNumber()
+               {
+                 stNumber num;
+                 cout << "Please enter a number" << endl;
+                 cin >> num.number;
+                 return num;
+               }
+               float TotalSum(stNumber num)
+               {
+                 float sum;
+                 sum = (float)num.number / 2;
+                 return sum;
+               }
+               void PrintNumber(float sum)
+               {
+                 cout << "the number is: " << sum;
+               }
+               int main()
+               {
+                 PrintNumber(TotalSum(ReadNumber()));
+                 return 0;
+               }
+## answer 2:
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          int ReadNumber()
+          {
+            int num;
+            cout << "please enter your number" << endl;
+            cin >> num;
+            return num;
+          }
+          float CalculateNumber(int num)
+          {
+            return (float)num / 2;
+          }
+          void printNumber(int num)
+          {
+            string Result = "Half of " + to_string(num) + "is :" + to_string(CalculateNumber(num));
+            cout << Result << endl;
+          }
+          int main()
+          {
+          
+            printNumber(ReadNumber());
+            return 0;
+          }
+## Write a program to ask a user about the mark if (mark >= 50, print pass) or (mark <= 50, print fail):
+
+               #include <iostream>
+               #include <string>
+               #include <cmath>
+               using namespace std;
+               enum enPassFail
+               {
+                 Pass = 1,
+                 Fail = 2
+               };
+               int ReadMark()
+               {
+                 int mark;
+                 cout << "Please enter your mark: " << endl;
+                 cin >> mark;
+                 return mark;
+               }
+               enPassFail CheckMark(int mark)
+               {
+                 if (mark >= 50)
+                   return enPassFail::Pass;
+                 else
+                   return enPassFail::Fail;
+               }
+               void PrintResult(int mark){
+                 if(CheckMark(mark) == enPassFail::Pass)
+                   cout<<"\n You Passed "<<endl;
+                 else 
+                   cout<<"\n You Failed "<<endl;
+               }
+               int main()
+               {
+                 PrintResult(ReadMark());
+                 return 0;
+               }
+## Write a program that asks a user to enter 3 numbers and calculate them:
+
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          // Write a program that asks a user to enter 3 numbers and calculate them
+          void ReadNumbers(int &Number1, int &Number2, int &Number3)
+          {
+            cout << "Please enter a number one \n";
+            cin >> Number1;
+            cout << "Please enter a number two \n";
+            cin >> Number2;
+            cout << "Please enter a number three \n";
+            cin >> Number3;
+          }
+          int CalculateNumber(int Number1, int Number2, int Number3)
+          {
+            return Number1 + Number2 + Number3;
+          }
+          void PrintNumber(int total)
+          {
+            cout << "total is :" << total << endl;
+          }
+          int main()
+          {
+            int Number1, Number2, Number3;
+            ReadNumbers(Number1, Number2, Number3);
+            int total = CalculateNumber(Number1, Number2, Number3);
+            PrintNumber(total);
+            return 0;
+          }
+## Write a program that asks a user to enter 3 marks and calculate the average and if the total average >= 50 print (pass) else print (fail):
+
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          // Write a program ask a user enter 3 numbers and calculate them
+          enum enPassFail
+          {
+            pass = 1,
+            fail = 2
+          };
+          void ReadMarks(int &mark1, int &mark2, int &mark3)
+          {
+            cout << "enter mark1: ";
+            cin >> mark1;
+          
+            cout << "enter mark2: ";
+            cin >> mark2;
+          
+            cout << "enter mark3: ";
+            cin >> mark3;
+          }
+          int sumOf3Mark3(int mark1, int mark2, int mark3)
+          {
+            return (mark1 + mark2 + mark3) / 3;
+          }
+          float calculateAverage(int mark1, int mark2, int mark3)
+          {
+            return (float)sumOf3Mark3(mark1, mark2, mark3);
+          }
+          enPassFail checkAverage(float average)
+          {
+            if (average >= 50)
+              return enPassFail::pass;
+            else
+              return enPassFail::fail;
+          }
+          void printAverage(float average)
+          {
+            if (checkAverage(average) == enPassFail::pass)
+              cout << "\nyour average is: " << average << " and  your pass";
+            else
+              cout << "\nyour average is: " << average << " and  your fail";
+          }
+          int main()
+          {
+            int mark1, mark2, mark3;
+            ReadMarks(mark1, mark2, mark3);
+            printAverage(calculateAverage(mark1, mark2, mark3));
+            return 0;
+          }
+
 
 
 
