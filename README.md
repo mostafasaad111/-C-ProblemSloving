@@ -1,4 +1,5 @@
-# fundamental-of-C++
+# Learning logic_of_programming by C++  && Problem Solving.
+# Functional Programming && OOP Programming.
 
 ## 1-first program
      .#include <iostream>
@@ -2506,6 +2507,584 @@ int main()
             printAverage(calculateAverage(mark1, mark2, mark3));
             return 0;
           }
+## Write a  program that asks a user to enter two numbers and print the max number:
+
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          //The program ask a user to enter two numbers and print the max number
+          enum numbers
+          {
+            num1 = 1,
+            num2 = 2
+          };
+          void ReadNumbers(int &num1, int &num2)
+          {
+            cout << "please enter number one: \n";
+            cin >> num1;
+            cout << "please enter number two: \n";
+            cin >> num2;
+          }
+          enNumbers checkNumber(int num1, int num2)
+          {
+            if (num1 > num2)
+              return enNumbers::num1;
+            else
+              return enNumbers::num2;
+          }
+          void printNumber(int num1, int num2){
+            if(checkNumber(num1, num2) == enNumbers::num1)
+              cout<<"the max number is:"<<num1;
+            else 
+              cout<<"the min number is:"<<num2;
+          }
+          int main()
+          {
+            int num1, num2;
+            ReadNumbers(num1,num2);
+            printNumber(num1, num2);
+            return 0;
+          }
+## Write a  program that asks a user to enter two numbers and print the max number of another answer:
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          //The program ask a user to enter two numbers and print the number
+          void ReadNumbers(int &num1, int &num2)
+          {
+            cout << "please enter number one: \n";
+            cin >> num1;
+            cout << "please enter number two: \n";
+            cin >> num2;
+          }
+          int checkNumber(int num1, int num2)
+          {
+            if (num1 > num2)
+              return num1;
+            else
+              return num2;
+          }
+          void printNumber(int max){
+            cout<<"\n the max number is: "<<max<<endl;
+          }
+          int main()
+          {
+            int num1, num2;
+            ReadNumbers(num1,num2);
+            printNumber(checkNumber(num1 , num2));
+            return 0;
+          }
+## Write a programm ask user enter two numbers and print  Swap between two numbers :
+               #include <iostream>
+               #include <string>
+               #include <cmath>
+               using namespace std;
+               // swap between two numbers
+               void ReadNumbers(int &number1, int &number2)
+               {
+                 cout << "Please enter number one \n";
+                 cin >> number1;
+               
+                 cout << "Please enter number two \n";
+                 cin >> number2;
+               }
+               int SwapTwoNumbers(int &number1, int &number2)
+               {
+                 int number3;
+               
+                 number3 = number1;
+                 number1 = number2;
+                 number2 = number3;
+               
+                 return number1, number2;
+               }
+               void PrintSwapNumber(int number1, int number2)
+               {
+               
+                 cout << "number1: " << number1 << endl;
+                 cout << "number2: " << number2 << endl;
+               }
+               int main()
+               {
+                 int number1, number2;
+                 ReadNumbers(number1, number2);
+                 SwapTwoNumbers(number1, number2);
+                 PrintSwapNumber(number1 , number2);
+                 return 0;
+               }
+## Write a program to calculate the area of the triangle by a and h :
+
+                #include <iostream>
+               #include <string>
+               #include <cmath>
+               using namespace std;
+               // Write a program to calculate the area of a triangle by a and h
+               void ReadNumbers(float &a, float &h)
+               {
+                 cout << "Please enter a number \n";
+                 cin >> a;
+               
+                 cout << "Please enter h number \n";
+                 cin >> h;
+               }
+               float TriangleArea(float a, float h)
+               {
+                 float area = .5 * a * h;
+                 return area;
+               }
+               void PrintArea(float area)
+               {
+                 cout << "Area: " << area << endl;
+               }
+               int main()
+               {
+                 float a, h;
+                 ReadNumbers(a, h);
+                 PrintArea(TriangleArea(a, h));
+               }
+## Write a program to calculate the circle area then print it on the screen:
+
+           #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          // Write a program to calculate the area of a circle by a and h
+          void ReadNumber(float &r)
+          {
+            cout << "Please enter a number \n";
+            cin >> r;
+          }
+          float CircleArea(float r)
+          {
+            float area = 3.14 * pow(r, 2);
+          
+            return area;
+          }
+          void PrintArea(float area)
+          {
+            cout << "Area: " << area << endl;
+          }
+          int main()
+          {
+            float r;
+            ReadNumber(r);
+            PrintArea(CircleArea(r));
+          }
+## Write a program to calculate the area of the circle  by (3.14 * d*d ) / 4 :
+
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          // Write a program to calculate the area of a circle  by (3.14 * d*d ) / 4
+          void ReadNumber(float &D)
+          {
+            cout << "Please enter a number \n";
+            cin >> D;
+          }
+          float CircleArea(float D)
+          {
+            float area = (3.14 * pow(D,2)) / 4;
+          
+            return area;
+          }
+          void PrintArea(float area)
+          {
+            cout << "Area: " << area << endl;
+          }
+          int main()
+          {
+            float D;
+            ReadNumber(D);
+            PrintArea(CircleArea(D));
+            return 0;
+          }
+## Write a program to calculate the circle area along the circumference, then print it on the screen:
+          
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          // Write a program to calculate the area of a circle  by (d^2) /3.14* 4
+          void ReadNumber(float &D)
+          {
+            cout << "Please enter a number \n";
+            cin >> D;
+          }
+          float CircleArea(float D)
+          {
+            float area = pow(D,2) /( 3.14 * 4);
+          
+            return area;
+          }
+          void PrintArea(float area)
+          {
+            cout << "Area: " << area << endl;
+          }
+          int main()
+          {
+            float D;
+            ReadNumber(D);
+            PrintArea(CircleArea(D));
+            return 0;
+          }
+## Write a program to calculate the circle area inscribed in an isosceles triangle:
+
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          // Write a program to calculate the area of a circle  by (d^2) /3.14* 4
+          void ReadNumber(float &D, float &c)
+          {
+            cout << "Please enter d number \n";
+            cin >> D;
+          
+            cout << "Please enter c number \n";
+            cin >> c;
+          }
+          float CircleArea(float D, float c)
+          {
+            float area = 3.14 * (pow(c, 2) / 4) * ((2 * D - c) / (2 * D + c));
+          
+            return area;
+          }
+          void PrintArea(float area)
+          {
+            cout << "Area: " << area << endl;
+          }
+          int main()
+          {
+            float D,c;
+            ReadNumber(D,c);
+            PrintArea(CircleArea(D,c));
+            return 0;
+          }
+## Write a program Read Until Age Between 18 and 45:
+
+               #include <iostream>
+               #include <string>
+               #include <cmath>
+               using namespace std;
+               // Write a program asking the user to enter numbers between 18 and 45
+               int ReadNumber()
+               {
+                 int number = 0;
+                 cout << "Please enter a number between 18 45:" << endl;
+                 cin >> number;
+                 return number;
+               }
+               bool CheckNumber(int number, int from, int to)
+               {
+                 return (number >= from && number <= to);
+               };
+               int ReadUntilBetween(int from, int to)
+               {
+                 int age;
+                 do
+                 {
+                   age = ReadNumber();
+                 } while (!CheckNumber(age, from, to));
+                 return age;
+               }
+               void PrintResult(int age){
+                 cout<<"your age is: "<<age<<endl;
+               
+               }
+               int main(){
+                 PrintResult(ReadUntilBetween(18,45));
+                 return 0;
+               }
+## Write a program print number from 1 to N:
+
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          int ReadNumber( )
+          {
+            int n;
+            cout << "Please enter a number\n";
+            cin >> n;
+          }
+          void Print_For_Loop(int n)
+          {
+            cout << " FOR LOOP " << endl;
+            for (int i = 0; i <= n; i++)
+            {
+              cout << i << endl;
+            }
+          }
+          void Print_While_Loop(int n)
+          {
+            cout << " FOR While loop " << endl;
+          
+            int counter = 0;
+            while (counter <= n)
+            {
+              counter++;
+              cout << counter << endl;
+            }
+          }
+          void Print_DO_While_Loop(int n)
+          {
+            cout << " FOR While Do Loop " << endl;
+          
+            int counter = 0;
+            do
+            {
+              counter++;
+              cout << counter << endl;
+            } while (counter <= n);
+          }
+          int main()
+          {
+            int n = ReadNumber();
+            
+            ReadNumber();
+            Print_For_Loop(n);
+            Print_DO_While_Loop(n);
+            Print_While_Loop(n);
+          
+            return 0;
+          }
+## Write a program print number from N to 1:
+
+               #include <iostream>
+               #include <string>
+               #include <cmath>
+               using namespace std;
+               int ReadNumber(int &n)
+               {
+                 cout << "Please enter a number\n";
+                 cin >> n;
+               }
+               void Print_For_Loop(int n)
+               {
+                 cout << " FOR LOOP " << endl;
+                 for (int i = 0 ; i < n; n--)
+                 {
+                   cout << n << endl;
+                 }
+               }
+               void Print_While_Loop(int n)
+               {
+                 cout << " FOR While loop " << endl;
+               
+                 int counter = 0;
+                 while (counter < n)
+                 {
+                   n--;
+                   cout << n << endl;
+                 }
+               }
+               void Print_DO_While_Loop(int n)
+               {
+                 cout << " FOR While Do Loop " << endl;
+               
+                 int counter = 0;
+                 do
+                 {
+                   n--;
+                   cout << n << endl;
+                 } while (counter < n);
+               }
+               int main()
+               {
+                 int n ;
+               
+                 ReadNumber(n);
+                 Print_For_Loop(n);
+                 Print_DO_While_Loop(n);
+                 Print_While_Loop(n);
+               
+                 return 0;
+               }
+## Sum Odd Numbers From 1 to N::
+
+
+               #include <iostream>
+               #include <string>
+               #include <cmath>
+               using namespace std;
+               int ReadNumber(int &n)
+               {
+                 cout << "Please enter a number\n";
+                 cin >> n;
+               }
+               void Print_For_Loop(int n)
+               {
+                 int sum = 0;
+                 cout << " FOR LOOP " << endl;
+                 for (int i = 0; i < n; n--)
+                 {
+                   if (n % 2 == 0)
+                   {
+                     sum += n;
+                   }
+                 }
+                 cout << "  sum = " << sum << endl;
+               }
+               void Print_While_Loop(int n)
+               {
+                 cout << " FOR While loop " << endl;
+                 int sum = 0;
+                 int counter = 0;
+                 while (counter < n)
+                 {
+                   if (n % 2 == 0)
+                   {
+                     sum += n;
+                   }
+                   n--;
+                 }
+                 cout << "  sum = " << sum << endl;
+               }
+               void Print_DO_While_Loop(int n)
+               {
+                 cout << " FOR While Do Loop " << endl;
+                 int sum = 0;
+                 int counter = 0;
+                 do
+                 {
+                   if (n % 2 == 0)
+                   {
+                     sum += n;
+                   }
+                   n--;
+                 } while (counter < n);
+                 cout << "  sum = " << sum << endl;
+               }
+               int main()
+               {
+                 int n;
+               
+                 ReadNumber(n);
+                 Print_For_Loop(n);
+                 Print_DO_While_Loop(n);
+                 Print_While_Loop(n);
+               
+                 return 0;
+               }
+## Sum Even Numbers From 1 to N::
+
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          enum enOddEven
+          {
+            odd = 1,
+            even = 2
+          };
+          enOddEven CheckNumber(int n)
+          {
+            if (n % 2 == 0)
+              return enOddEven::even;
+            else
+              return enOddEven::odd;
+          }
+          int ReadNumber(int &n)
+          {
+            cout << "Please enter a number\n";
+            cin >> n;
+          }
+          void Print_For_Loop(int n)
+          {
+            int sum = 0;
+          
+            cout << " FOR LOOP " << endl;
+            for (int i = 0; i <= n; i++)
+            {
+              if (CheckNumber(i) == enOddEven::even)
+              {
+                sum += i;
+              }
+            }
+            cout << "  sum = " << sum << endl;
+          }
+          void Print_While_Loop(int n)
+          {
+            cout << " FOR While loop " << endl;
+            int sum = 0;
+            int counter = 0;
+            while (counter < n)
+            {
+              counter++;
+              if (CheckNumber(counter) == enOddEven::even)
+              {
+                sum += counter;
+              }
+            }
+            cout << "  sum = " << sum << endl;
+          }
+          void Print_DO_While_Loop(int n)
+          {
+            cout << " FOR While Do Loop " << endl;
+            int sum = 0;
+            int counter = 0;
+            do
+            {
+              counter++;
+              if (CheckNumber(counter) == enOddEven::even)
+              {
+                sum += counter;
+              }
+            } while (counter < n);
+            cout << "  sum = " << sum << endl;
+          }
+          int main()
+          {
+            int n;
+          
+            ReadNumber(n);
+            Print_For_Loop(n);
+            Print_While_Loop(n);
+            Print_DO_While_Loop(n);
+          
+            return 0;
+          }
+## Write a program print Factorial OF N!:
+
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          int ReadPositiveNumber(string message)
+          {
+            int number;
+          
+            do
+            {
+              
+              cout << message << endl;
+              cin >> number;
+          
+            } while (number < 0);
+          
+            return number;
+          }
+          int FactorialLoop(int n)
+          {
+            int sum = 1;
+          
+            for (int counter = n; counter >= 1; counter--)
+            {
+              sum *= counter;
+            }
+            return sum;
+          }
+          int main()
+          {
+            FactorialLoop(ReadPositiveNumber("please enter a positive number: "));
+            return 0;
+          }
+
+
 
 
 
