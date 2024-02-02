@@ -3080,11 +3080,42 @@ int main()
           }
           int main()
           {
-            FactorialLoop(ReadPositiveNumber("please enter a positive number: "));
+            FactorialLoop(ReadPositiveNumber("Please enter a positive number: "));
             return 0;
           }
+ ## Write a program to read a bill value  add service fee and sales tax to it, and print the total bill on the screen:
 
-
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          float ReadPositiveNumber(string message)
+          {
+            float number = 0;
+            do
+            {
+              cout << message << endl;
+              cin >> number;
+          
+            } while (number <= 0);
+            return number;
+          }
+          float TotalBillAfterServiceAndTax(float totalBill)
+          {
+            totalBill = totalBill * 1.1;
+            totalBill = totalBill * 1.16;
+          
+            return totalBill;
+          }
+          int main(){
+            float totalBill = ReadPositiveNumber("Please Enter a total bill");
+          
+            cout<<endl;
+            cout<<"Total bill = "<<totalBill<<endl;
+            cout<<"total bill after service and tax = "<<TotalBillAfterServiceAndTax(totalBill)<<endl;
+          
+            return 0;
+          }
 
 
 
