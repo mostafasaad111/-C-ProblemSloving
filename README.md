@@ -3117,8 +3117,85 @@ int main()
             return 0;
           }
 
-
-
+## Write a program to read a NumberOfHours and calculates the number of weeks, and days included int that number:
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          float ReadNumberOfHours(string message)
+          {
+            float number = 0;
+            do
+            {
+              cout << message << endl;
+              cin >> number;
+            } while (number <= 0);
+            return number;
+          }
+          float CalculateWeeksAndDays(float number, float &weeks, float &days)
+          {
+            weeks = number / (24 * 7);
+            days = number / 24;
+          }
+          
+          int main()
+          {
+            float weeks, days;
+            float number = ReadNumberOfHours("please enter a number of hours");
+          
+            CalculateWeeksAndDays(number, weeks, days);
+          
+            cout << "number of days = " << days << endl;
+            cout << "number of weeks = " << weeks << endl;
+          
+            return 0;
+          }
+## Write a program to calculate the task duration in seconds and print it on screen :
+## Given the time duration of a task in the number of days, hours, minutes, and seconds:
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          float ReadNumbers(float &days, float &hours, float &minutes, float &seconds)
+          {
+            cout << "Please enter a number of days" << endl;
+            cin >> days;
+          
+            cout << "Please enter a number of hours" << endl;
+            cin >> hours;
+          
+            cout << "Please enter a number of minutes" << endl;
+            cin >> minutes;
+          
+            cout << "Please enter a number of seconds" << endl;
+            cin >> seconds;
+          }
+          float DaysToSeconds(float days)
+          {
+            return days * 24 * 60 * 60;
+          }
+          float HoursToSeconds(float hours)
+          {
+            return hours *  60 * 60;
+          }
+          float MinutesToSeconds(float minutes)
+          {
+            return minutes  * 60;
+          }
+          int main(){
+            float days , hours , minutes , seconds ;
+            ReadNumbers(days, hours, minutes, seconds);
+          
+            float a = DaysToSeconds(days);
+            float b = HoursToSeconds(hours); 
+            float c = MinutesToSeconds(minutes);
+          
+            float totalSeconds = a + b + c + seconds;
+            cout<<"Total seconds = "<<totalSeconds<<endl;
+            
+            return 0;
+          }
+ 
 
 
 
