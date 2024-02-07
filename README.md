@@ -3333,5 +3333,74 @@ int main()
             PrintResult(ReadPositiveNumber("Please enter a number"));
             return 0;
           }
+## Write a program to print the perfect Number from 1 to N .
+
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int ReadPositiveNumber(string message, int &number)
+          {
+            number = 0;
+            do
+            {
+              cout << message << endl;
+              cin >> number;
+            } while (number <= 0);
+            return number;
+          }
+          int isPerfectNumber(int number)
+          {
+          
+            for (int i = 1; i <= number; i++)
+            {
+              int sum = 0;
+              for (int j = 1; j < i; j++)
+              {
+                if (i % j == 0)
+                  sum += j;
+              }
+              if (i == sum)
+                cout << i << "\n Prefect Number " << endl;
+              else
+                cout << i << "\n not perfect number" << endl;
+            }
+          }
+          
+          int main()
+          {
+            int number;
+            ReadPositiveNumber("Please enter a positive number", number);
+            isPerfectNumber(number);
+            return 0;
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
