@@ -3196,10 +3196,142 @@ int main()
             return 0;
           }
  
+## Write a program print prime number from 1 to n:-
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          enum enPrimeNumber
+          {
+            Prime = 1,
+            NotPrime = 2
+          };
+          int ReadPositiveNumber(string Message)
+          {
+            int number = 0;
+            do
+            {
+              cout << Message << endl;
+              cin >> number;
+            } while (number <= 0);
+            return number;
+          }
+          enPrimeNumber CheckPrime(int number)
+          {
+            int m = round(number / 2);
+            for (int counter = 2; counter <= m; counter++)
+            {
+              if (number % counter == 0)
+              {
+                return enPrimeNumber::NotPrime;
+              }
+            }
+            return enPrimeNumber::Prime;
+          }
+          void PrintPrimeNumberFrom1ToN(int number)
+          {
+            cout << "\n";
+            cout << "Prime number from " << 1 << "to" << number;
+            cout << "are : " << endl;
+            for (int i = 1; i <= number; i++)
+            {
+              if (CheckPrime(i) == enPrimeNumber::Prime)
+                cout << i << endl;
+            }
+          }
+          int main()
+          {
+            PrintPrimeNumberFrom1ToN(ReadPositiveNumber("Please enter a positive number"));
+          
+            return 0;
+          }
 
+## Write a program to check whether the number is perfect or not perfect.
 
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          enum enPrefectNotPerfect
+          {
+            Perfect = 1,
+            NotPerfect = 2
+          };
+          int ReadPositiveNumber(string message)
+          {
+            int number = 0;
+            do
+            {
+              cout << message << endl;
+              cin >> number;
+            } while (number <= 0);
+            return number;
+          }
+          enPrefectNotPerfect CheckNumber()
+          {
+            int number = ReadPositiveNumber("please enter a number");
+            int sum = 0;
+            for (int counter = 1; counter < number; counter++)
+            {
+              if (number % counter == 0)
+                sum += counter;
+            }
+            if (sum == number)
+              return enPrefectNotPerfect::Perfect;
+          
+            else
+              return enPrefectNotPerfect::NotPerfect;
+          }
+          void PrintPerfectNotPerfect()
+          {
+            if (CheckNumber() == enPrefectNotPerfect::Perfect)
+              cout << "Perfect number" << endl;
+            else
+              cout << "Not perfect number" << endl;
+          }
+          int main()
+          {
+            PrintPerfectNotPerfect();
+            return 0;
+          }
 
-
-
+## Another Solution.
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int ReadPositiveNumber(string message)
+          {
+            int number = 0;
+            do
+            {
+              cout << message << endl;
+              cin >> number;
+            } while (number <= 0);
+            return number;
+          }
+          bool isPerfectNumber(int number)
+          {
+            int sum = 0;
+            for (int i = 0; i < number; i++)
+            {
+              if (number % i == 0)
+                sum += i;
+            }
+            return number == sum;
+          }
+          void PrintResult(int number)
+          {
+            if (isPerfectNumber(number))
+              cout << number << "Prefect Number " << endl;
+            else
+              cout << number << "not perfect number" << endl;
+          }
+          int main()
+          {
+            PrintResult(ReadPositiveNumber("Please enter a number"));
+            return 0;
+          }
 
 
