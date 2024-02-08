@@ -3585,7 +3585,7 @@ int main()
                  return 0;
                }
                
-##* Write a program to read a number and print reversed.
+## Write a program to read a number and print reversed.
 ## if input = 1234 , output = 4321.
 
           #include <iostream>
@@ -3657,8 +3657,44 @@ int main()
             return 0;
           }
 
-## 
+## Write a program read a digit and a number , the print digit frequency in the number.
 
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int ReadPositiveNumber(string message)
+          {
+            int number = 0;
+            do
+            {
+              cout << message << endl;
+              cin >> number;
+            } while (number <= 0);
+            return number;
+          }
+          int ReverseNumber(int number)
+          {
+            int Remainder = 0;
+            int number2 = 0;
+            while (number > 0)
+            {
+              Remainder = number % 10;
+              number = number / 10;
+              if(Remainder == 2){
+                number2++;
+              }
+            }
+            return number2;
+          }
+          
+          int main()
+          {
+            cout<<ReverseNumber(ReadPositiveNumber("Please enter a positive number"));
+            return 0;
+          }
+## 
 
 
 
