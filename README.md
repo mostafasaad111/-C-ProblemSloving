@@ -3363,8 +3363,6 @@ int main()
               }
               if (i == sum)
                 cout << i << "\n Prefect Number " << endl;
-              else
-                cout << i << "\n not perfect number" << endl;
             }
           }
           
@@ -3375,11 +3373,116 @@ int main()
             isPerfectNumber(number);
             return 0;
           }
+## Another Solution:-
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int ReadPositiveNumber(string message)
+          {
+            int number = 0;
+            do
+            {
+              cout << message << endl;
+              cin >> number;
+            } while (number <= 0);
+            return number;
+          }
+          bool isPerfectNumber(int number)
+          {
+            int sum = 0;
+            for (int i = 1; i < number; i++)
+            {
+              if (number % i == 0)
+                sum += i;
+            }
+            return number == sum;
+          }
+          void PrintPerfectNumberFrom1ToN(int number)
+          {
+            for (int i = 1; i <= number; i++)
+            {
+              if (isPerfectNumber(i))
+                cout << i << endl;
+            }
+          }
+          
+          int main()
+          {
+            PrintPerfectNumberFrom1ToN(ReadPositiveNumber("Please enter a positive number"));
+            return 0;
+          }
 
+## Write a program to read number and print reverse order.
 
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int ReadPositiveNumber(string message)
+          {
+            int number = 0;
+            do
+            {
+              cout << message << endl;
+              cin >> number;
+            } while (number <= 0);
+            return number;
+          }
+          string ReversePositiveNumber(int number)
+          {
+            string strNumber = to_string(number);
+            string reverse = "";
+            for (int i = strNumber.length() - 1; i >= 0; i--)
+            {
+              reverse +=strNumber[i] ;
+            }
+            return reverse;
+          }
+          void PrintNumberReverse(string strNumber)
+          {
+            cout<<strNumber<<endl;
+          }
+          int main()
+          {
+            int number = ReadPositiveNumber("Please enter a positive number");
+            string reverse = ReversePositiveNumber(number);
+            PrintNumberReverse(reverse);
+          }
 
+## Another Solution.
 
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
 
+int ReadPositiveNumber(string message)
+{
+  int number = 0;
+  do
+  {
+    cout << message << endl;
+    cin >> number;
+  } while (number <= 0);
+  return number;
+}
+string ReverseNumber(int number)
+{
+  string strNumber = to_string(number);
+  for (int i = strNumber.length() - 1; i >= 0; i--)
+  {
+    cout<<strNumber[i] <<endl;
+  }
+}
+
+int main()
+{
+  ReverseNumber(ReadPositiveNumber("Please enter a positive number"));
+  return 0;
+}
 
 
 
