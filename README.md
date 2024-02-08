@@ -3585,7 +3585,7 @@ int main()
                  return 0;
                }
                
-## Write a program to read a number and print reversed.
+##* Write a program to read a number and print reversed.
 ## if input = 1234 , output = 4321.
 
           #include <iostream>
