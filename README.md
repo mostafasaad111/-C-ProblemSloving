@@ -3454,35 +3454,228 @@ int main()
 
 ## Another Solution.
 
-#include <iostream>
-#include <string>
-#include <cmath>
-using namespace std;
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int ReadPositiveNumber(string message)
+          {
+            int number = 0;
+            do
+            {
+              cout << message << endl;
+              cin >> number;
+            } while (number <= 0);
+            return number;
+          }
+          string ReverseNumber(int number)
+          {
+            string strNumber = to_string(number);
+            for (int i = strNumber.length() - 1; i >= 0; i--)
+            {
+              cout<<strNumber[i] <<endl;
+            }
+          }
+          
+          int main()
+          {
+            ReverseNumber(ReadPositiveNumber("Please enter a positive number"));
+            return 0;
+          }
 
-int ReadPositiveNumber(string message)
-{
-  int number = 0;
-  do
-  {
-    cout << message << endl;
-    cin >> number;
-  } while (number <= 0);
-  return number;
-}
-string ReverseNumber(int number)
-{
-  string strNumber = to_string(number);
-  for (int i = strNumber.length() - 1; i >= 0; i--)
-  {
-    cout<<strNumber[i] <<endl;
-  }
-}
+## Anthor Solution2.
 
-int main()
-{
-  ReverseNumber(ReadPositiveNumber("Please enter a positive number"));
-  return 0;
-}
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int ReadPositiveNumber(string message)
+          {
+            int number = 0;
+            do
+            {
+              cout << message << endl;
+              cin >> number;
+            } while (number <= 0);
+            return number;
+          }
+          void ReverseNumber(int number)
+          {
+            string strNumber = to_string(number);
+            for (int i = strNumber.length() - 1; i >= 0; i--)
+            {
+              cout<<strNumber[i] <<endl;
+            }
+          }
+          
+          int main()
+          {
+            ReverseNumber(ReadPositiveNumber("Please enter a positive number"));
+            return 0;
+          }
+## Anthor Solution3.
+
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int ReadPositiveNumber(string message)
+          {
+            int number = 0;
+            do
+            {
+              cout << message << endl;
+              cin >> number;
+            } while (number <= 0);
+            return number;
+          }
+          void ReverseNumber(int number)
+          {
+            int Remainder = 0;
+            while (number > 0)
+            {
+              Remainder = number % 10;
+              number = number / 10;
+              cout << Remainder << endl;
+            }
+          }
+          
+          int main()
+          {
+            ReverseNumber(ReadPositiveNumber("Please enter a positive number"));
+            return 0;
+          }
+
+## Write a program to read a number and print sum of this digits.
+
+               #include <iostream>
+               #include <string>
+               #include <cmath>
+               using namespace std;
+               
+               int ReadPositiveNumber(string message)
+               {
+                 int number = 0;
+                 do
+                 {
+                   cout << message << endl;
+                   cin >> number;
+                 } while (number <= 0);
+                 return number;
+               }
+               int ReverseNumber(int number)
+               {
+                 int Remainder = 0;
+                 int sum = 0;
+                 while (number > 0)
+                 {
+                   Remainder = number % 10;
+                   number = number / 10;
+                   sum += Remainder;
+                 }
+                   return sum;
+               }
+               
+               int main()
+               {
+                 cout<< " \n sum = "<<ReverseNumber(ReadPositiveNumber("Please enter a positive number")) <<endl;
+                 return 0;
+               }
+               
+## Write a program to read a number and print reversed.
+## if input = 1234 , output = 4321.
+
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int ReadPositiveNumber(string message)
+          {
+            int number = 0;
+            do
+            {
+              cout << message << endl;
+              cin >> number;
+            } while (number <= 0);
+            return number;
+          }
+          int ReverseNumber(int number)
+          {
+            int Remainder = 0;
+            string reverse = "";
+            while (number > 0)
+            {
+              Remainder = number % 10;
+              number = number / 10;
+              reverse += to_string(Remainder);
+            }
+            cout << reverse << endl;
+          }
+          
+          int main()
+          {
+            ReverseNumber(ReadPositiveNumber("Please enter a positive number")) ;
+            return 0;
+          }
+
+## another Solution.
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int ReadPositiveNumber(string message)
+          {
+            int number = 0;
+            do
+            {
+              cout << message << endl;
+              cin >> number;
+            } while (number <= 0);
+            return number;
+          }
+          int ReverseNumber(int number)
+          {
+            int Remainder = 0;
+            int number2 = 0;
+            while (number > 0)
+            {
+              Remainder = number % 10;
+              number = number / 10;
+              number2 = number2 * 10 + Remainder;
+            }
+            return number2;
+          }
+          
+          int main()
+          {
+            cout<<ReverseNumber(ReadPositiveNumber("Please enter a positive number"));
+            return 0;
+          }
+
+## 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
