@@ -3694,11 +3694,109 @@ int main()
             cout<<ReverseNumber(ReadPositiveNumber("Please enter a positive number"));
             return 0;
           }
-## 
+## Write a program read a number and print all digit frequency in that numbrt.
 
 
+               #include <iostream>
+               #include <string>
+               #include <cmath>
+               using namespace std;
+               
+               int ReadPositiveNumber(string message)
+               {
+                 int number = 0;
+                 do
+                 {
+                   cout << message << endl;
+                   cin >> number;
+                 } while (number <= 0);
+                 return number;
+               }
+               int CountDigitFrequency(short digitToCheck, int number)
+               {
+                 int Remainder = 0, FreqCount = 0;
+               
+                 while (number > 0)
+                 {
+                   Remainder = number % 10;
+                   number = number / 10;
+                   if (digitToCheck == Remainder)
+                   {
+                     FreqCount++;
+                   }
+                 }
+                 return FreqCount;
+               }
+               void PrintAllDigitsFrequencey(int number)
+               {
+                 for (int i = 0; i < 10; i++)
+                 {
+                   short DigitFrequency = 0;
+                   DigitFrequency = CountDigitFrequency(i, number);
+               
+                   if (DigitFrequency > 0)
+                   {
+                     cout << "Digit: " << i << " Frequency is " << DigitFrequency << endl;
+                   }
+                 }
+               }
+               
+               int main()
+               {
+                 int number = ReadPositiveNumber("Please enter a positive number");
+                 PrintAllDigitsFrequencey(number);
+               
+                 return 0;
+               }
 
+##  Write a program read number and print from right to left .
+## input = 1234 
+## output =>
+## 1
+## 2
+## 3
+## 4
 
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int ReadPositiveNumber(string message)
+          {
+            int number = 0;
+            do
+            {
+              cout << message << endl;
+              cin >> number;
+            } while (number <= 0);
+            return number;
+          }
+          int PrintNumber( int number)
+          {
+            int Remainder = 0, number2 = 0;
+          
+            while (number > 0)
+            {
+              Remainder = number % 10;
+              number = number / 10;
+              number2 = number2 * 10 + Remainder;
+            }
+            int Remainder2 = 0;
+            while (number2 > 0)
+            {
+              Remainder2 = number2 % 10;
+              number2 = number2 / 10;
+              cout << Remainder2 << endl;
+            }
+          }
+          
+          int main()
+          {
+            PrintNumber(ReadPositiveNumber("Please enter a positive number")) ;
+          
+            return 0;
+          }
 
 
 
