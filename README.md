@@ -3798,15 +3798,213 @@ int main()
             return 0;
           }
 
+## Write a program to read numbers and  check if it is a palindrome.
+## palindrome is a number that reads the same from right to left.
+
+               #include <iostream>
+               #include <string>
+               #include <cmath>
+               using namespace std;
+               
+               int ReadPositiveNumber(string message)
+               {
+                 int number = 0;
+                 do
+                 {
+                   cout << message << endl;
+                   cin >> number;
+                 } while (number <= 0);
+                 return number;
+               }
+               int PrintNumber(int number)
+               {
+                 int Remainder = 0, number2 = 0;
+               
+                 while (number > 0)
+                 {
+                   Remainder = number % 10;
+                   number = number / 10;
+                   number2 = number2 * 10 + Remainder;
+                 }
+                 return number2;
+               }
+               int ReverseNumber(int number)
+               {
+                 int Remainder2 = 0;
+                 int number3 = 0;
+                 int number2 = PrintNumber(number);
+               
+                 while (number2 > 0)
+                 {
+                   Remainder2 = number2 % 10;
+                   number2 = number2 / 10;
+                   number3 = number3 * 10 + Remainder2;
+                 }
+                 return number3;
+               }
+               int check(int number)
+               {
+                 int number2 = PrintNumber(number);
+                 cout << "number2 = " << number2 << endl;
+                 int number3 = ReverseNumber(number);
+                 cout << "number3 = " << number3 << endl;
+               
+                 if (number2 == number3)
+                 {
+                   cout << "Yes, it is a Palindrome number";
+                 }
+                 else
+                 {
+                   cout << "no, it is  not Palindrome number";
+                 }
+               }
+               int main()
+               {
+                 check(ReadPositiveNumber("Please enter a positive number"));
+               
+                 return 0;
+               }
 
 
+## Another Solution.
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int ReadPositiveNumber(string message)
+          {
+            int number = 0;
+            do
+            {
+              cout << message << endl;
+              cin >> number;
+            } while (number <= 0);
+            return number;
+          }
+          int ReverseNumber(int number)
+          {
+            int Remainder = 0;
+            int number2 = 0;
+          
+            while (number > 0)
+            {
+              Remainder = number % 10;
+              number = number / 10;
+              number2 = number2 * 10 + Remainder;
+            }
+            return number2;
+          }
+          int check(int number)
+          {
+          
+            int number2 = ReverseNumber(number);
+            cout << "number2 = " << number2 << endl;
+          
+            if (number == number2)
+            {
+              cout << "Yes, it is a Palindrome number";
+            }
+            else
+            {
+              cout << "no, it is  not Palindrome number";
+            }
+          }
+          int main()
+          {
+            check(ReadPositiveNumber("Please enter a positive number"));
+          
+            return 0;
+          }
+## Another Solution.
 
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int ReadPositiveNumber(string message)
+          {
+            int number = 0;
+            do
+            {
+              cout << message << endl;
+              cin >> number;
+            } while (number <= 0);
+            return number;
+          }
+          int ReverseNumber(int number)
+          {
+            int Remainder = 0;
+            int number2 = 0;
+          
+            while (number > 0)
+            {
+              Remainder = number % 10;
+              number = number / 10;
+              number2 = number2 * 10 + Remainder;
+            }
+            return number2;
+          }
+          bool check(int number)
+          {
+            return number == ReverseNumber(number);
+          }
+          int main()
+          {
+          
+            if (check(ReadPositiveNumber("Please enter a positive number")))
+            {
+              cout << "Yes, it is a Palindrome number";
+            }
+            else
+            {
+              cout << "no, it is  not Palindrome number";
+            }
+          
+            return 0;
+          }
 
+## Write a program to read a number and print the number as follows.
+## if input = 5;
+## 55555
+## 4444
+## 333
+## 22
+## 1
 
-
-
-
-
+               #include <iostream>
+               #include <string>
+               #include <cmath>
+               using namespace std;
+               
+               int ReadPositiveNumber(string message)
+               {
+                 int number = 0;
+                 do
+                 {
+                   cout << message << endl;
+                   cin >> number;
+                 } while (number <= 0);
+                 return number;
+               }
+               int invertedNumber(int number)
+               {
+                 while (number > 0)
+                 {
+                   for (int i = number; i > 0; i--)
+                   {
+                     cout << number;
+                   }
+                   number--;
+                   cout<<endl;
+                 }
+               }
+               int main()
+               {
+                 invertedNumber(ReadPositiveNumber("Please enter a number"));
+                 return 0;
+               }
 
 
 
