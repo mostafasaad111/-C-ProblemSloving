@@ -4006,16 +4006,284 @@ int main()
                  return 0;
                }
 
+## Another Solution.
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int ReadPositiveNumber(string message)
+          {
+            int number = 0;
+            do
+            {
+              cout << message << endl;
+              cin >> number;
+            } while (number <= 0);
+            return number;
+          }
+          int invertedNumber(int number)
+          {
+            cout << endl;
+            for (int i = 0; i < number; i--)
+            {
+              for (int j = 0; j < number; j++)
+              {
+                cout << i;
+              }
+            }
+          }
+          int main()
+          {
+            invertedNumber(ReadPositiveNumber("Please enter a number"));
+            return 0;
+          }
+          
+## Write a program to read a number and print the number as follows.
+## if input = 5;
+## 1
+## 22
+## 333
+## 4444
+## 55555
+
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int ReadPositiveNumber(string message)
+          {
+            int number = 0;
+            do
+            {
+              cout << message << endl;
+              cin >> number;
+            } while (number <= 0);
+            return number;
+          }
+          int invertedNumber(int number)
+          {
+            for (int i = 1; i <= number; i++)
+            {
+              cout << endl;
+              for (int j = 0; j < i; j++)
+              {
+                cout << i;
+              }
+            }
+          }
+          int main()
+          {
+            invertedNumber(ReadPositiveNumber("Please enter a number"));
+            return 0;
+          }
+          
+## Write a program to read a Letter and print the number as follows.
+## if input = 5;
+## A
+## BB
+## CCC
+## DDDD
+## FFFFF
+     
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int ReadPositiveNumber(string message)
+          {
+            int number = 0;
+            do
+            {
+              cout << message << endl;
+              cin >> number;
+            } while (number <= 0);
+            return number;
+          }
+          int PrintLetterNumber(int number)
+          {
+          
+            for (int i =65; i <=  65 + number - 1 ; i++)
+            {
+              for (int j = 1; j <= number - (65 + number - 1 - i); j++)
+              {
+                cout << char(i);
+              }
+              cout << endl;
+            }
+          }
+          int main()
+          {
+            PrintLetterNumber(ReadPositiveNumber("Please enter a number"));
+            return 0;
+          }
+
+## Write a program to read a Letter and print the number as follows.
+## if input = 5;
+## FFFFF
+## DDDD
+## CCC
+## BB
+## A
+
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          int ReadPositiveNumber(string message)
+          {
+            int number = 0;
+            do
+            {
+              cout << message << endl;
+              cin >> number;
+            } while (number <= 0);
+            return number;
+          }
+          int PrintLetterNumber(int number)
+          {
+          
+            for (int i = 65 + number - 1; i >= 65; i--)
+            {
+              for (int j = 1; j <= number - (65 + number - 1 - i); j++)
+              {
+                cout << char(i);
+              }
+              cout << endl;
+            }
+          }
+          int main()
+          {
+            PrintLetterNumber(ReadPositiveNumber("Please enter a number"));
+            return 0;
+          }
+
+## Write a program to print all Words from AAA TO ZZZ.
+
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          
+          void PrintAllNumber()
+          {
+            string word = "";
+            for (int i = 65; i <= 90; i++)
+            {
+              for (int j = 65; j <= 90; j++)
+              {
+                for (int k = 65; k <= 90; k++)
+                {
+                  word = word + char(i);
+                  word = word + char(j);
+                  word = word + char(k);
+                  cout << word << endl;
+                  word = "";
+                }
+              }
+              cout << endl;
+            }
+          }
+          int main()
+          {
+            PrintAllNumber();
+          }
+
+## Write a program to guess a 3-letter Password (all capital).
+## input => (AAF).
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          using namespace std;
+          string ReadPassWord(string message)
+          {
+            string word2;
+            cout << message << endl;
+            cin >>  word2;
+            return word2;
+          }
+          bool PrintAllNumber(string word2)
+          {
+            string word = "";
+            int counter = 0;
+            for (int i = 65; i <= 90; i++)
+            {
+              for (int j = 65; j <= 90; j++)
+              {
+                for (int k = 65; k <= 90; k++)
+                {
+                  word = word + char(i);
+                  word = word + char(j);
+                  word = word + char(k);
+                  counter++;
+                  cout << word << endl;
+                  if (word == word2)
+                  {
+                    cout << "train" << counter << ":AAF" << endl;
+                    return true;
+                  }
+                  
+                  word = "";
+                }
+              }
+              cout << endl;
+            }
+            return false;
+          }
+          int main()
+          {
+            PrintAllNumber(ReadPassWord("Please enter a pass word"));
+          }
+
+## Write a program to read a text and encrypt it, decrypt it. 
 
 
-
-
-
-
-
-
-
-
+               #include <iostream>
+               #include <string>
+               #include <cmath>
+               using namespace std;
+               string ReadText()
+               {
+                 string text;
+                 cout << "Please enter your text" << endl;
+                 getline(cin, text);
+               
+                 return text;
+               }
+               string EncryptText(string text, short EncryptKey)
+               {
+                 for (int i = 0; i < text.length(); i++)
+                 {
+                   text[i] = char((int)text[i] + EncryptKey);
+                 }
+                 return text;
+               }
+               string DeEncryptText(string text, short EncryptKey)
+               {
+                 for (int i = 0; i < text.length(); i++)
+                 {
+                   text[i] = char((int)text[i] - EncryptKey);
+                 }
+                 return text;
+               }
+               int main()
+               {
+                 const short EncryptKey = 9;
+                 string text = ReadText();
+               
+                 string TextEncrypt = EncryptText(text, EncryptKey);
+                 string TextDeEncrypt = DeEncryptText(TextEncrypt, EncryptKey);
+               
+                 cout << "text" << endl;
+                 cout << text << endl;
+                 cout << "text after encrypt" << endl;
+                 cout << TextEncrypt << endl;
+                 cout << "text deEncrypt" << endl;
+                 cout << TextDeEncrypt << endl;
+               }
 
 
 
