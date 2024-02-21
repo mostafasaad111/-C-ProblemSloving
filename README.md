@@ -4285,8 +4285,31 @@ int main()
                  cout << TextDeEncrypt << endl;
                }
 
+## Write a program to print 3 random numbers from 1 to 10.
 
-
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          #include <cstdlib>
+          using namespace std;
+          
+          int RandomNumber(int from, int to)
+          {
+          
+            int randNum = rand() % (to - from + 1) + from;
+            return randNum;
+          }
+          int main()
+          {
+            srand((unsigned)time(NULL));
+          
+            cout << RandomNumber(10, 500) << endl;
+            cout << RandomNumber(10, 500) << endl;
+            cout << RandomNumber(10, 500) << endl;
+          
+            return 0;
+          }
+## 
 
 
 
