@@ -49,7 +49,7 @@
                  
                  return 0 ;
                }
-## increment && decrement example :
+## 5-increment && decrement example :
 
           #include <iostream>
           using namespace std;
@@ -66,7 +66,7 @@
             cout<< "A = " << A << endl;
             return 0;
           }
-## Assignment Operators :
+## 6-Assignment Operators :
           #include <iostream>
           using namespace std;
           int main()
@@ -88,7 +88,7 @@
           
           }
 
-## Relational Operators :
+## 7- Relational Operators :
 
           #include <iostream>
           using namespace std;
@@ -106,7 +106,7 @@
             return 0;
           
           }
-## Relational 0perateor 2 :
+## 8- Relational 0perateor 2 :
 
 
           #include <iostream>
@@ -131,7 +131,7 @@
             return 0;
           
           }
-## Logical Operators :
+## 9- Logical Operators :
           #include <iostream>
           using namespace std;
           int main()
@@ -166,7 +166,7 @@
             return 0;
           
           }
-## Math Functions :
+## 10- Math Functions :
 
           #include <iostream>
           #include <cmath>
@@ -198,7 +198,7 @@
           
           }
 
-## Task 16 Rectangle Area by Diagonal & Side:
+## 11-  Rectangle Area by Diagonal & Side:
           #include <iostream>
           #include <cmath>
           using namespace std;
@@ -217,7 +217,7 @@
             return 0;
           
 }
-## Calculate Circle Area :
+## 12-- Calculate Circle Area :
                #include <iostream>
                #include <cmath>
                using namespace std;
@@ -233,7 +233,7 @@
                  return 0;
                
                }
-##   Calculate Circle Area by Diameter :      
+##  13- Calculate Circle Area by Diameter :      
 
           #include <iostream>
           #include <cmath>
@@ -265,7 +265,7 @@
             return 0;
           
           }
-## Circle Area Along the Circumference :
+## 14- Circle Area Along the Circumference :
 
            #include <iostream>
           #include <cmath>
@@ -282,7 +282,7 @@
           
           }
           
-## Circle Area inscribed in an Isosceles Triangle :
+## 15- Circle Area inscribed in an Isosceles Triangle :
 
           #include <iostream>
           #include <cmath>
@@ -302,7 +302,7 @@
           
           }
 
-## Circle Area Described Around an Arbitrary Triangle 
+## 16- Circle Area Described Around an Arbitrary Triangle 
 
   
           #include <iostream>
@@ -327,7 +327,7 @@
             return 0;
           
           }
-## Pover of 2,3,4:
+## 17- Pover of 2,3,4:
 
           #include <iostream>
           #include <cmath>
@@ -351,7 +351,7 @@
             return 0;
           
           }
-## Power of M:
+## 18- Power of M:
           #include <iostream>
           #include <cmath>
           using namespace std;
@@ -397,7 +397,7 @@ Task Duration In Seconds:
           
           }
           
-## Seconds to Days Hours Minutes Seconds :
+## 19-  Seconds to Days Hours Minutes Seconds :
 
           #include <iostream>
           #include <cmath>
@@ -424,7 +424,7 @@ Task Duration In Seconds:
           
           }
 
-## function code example:
+## 20- function code example:
 
           #include <iostream>
           #include <string>
@@ -465,7 +465,7 @@ Task Duration In Seconds:
             PrintILoveProgrammingFunction();
             return 0;
           }
-## getLine example code:
+## 21-  getLine example code:
           #include <iostream>
           #include <string>
           #include <cmath>
@@ -491,7 +491,7 @@ Task Duration In Seconds:
             cout<<"your country is: "<<country<<endl;
             return 0;
           }
-  ## Function VS Procedure :
+  ## 22- Function VS Procedure :
           #include <iostream>
           #include <string>
           #include <cmath>
@@ -522,7 +522,7 @@ Task Duration In Seconds:
           
             return 0;
           }
-## Parameter Function :
+## 23 - Parameter Function :
           #include <iostream>
           #include <string>
           #include <cmath>
@@ -545,7 +545,7 @@ Task Duration In Seconds:
             cout<<MyFunction(num1,num2)<<endl;
             return 0;
           }
-## Procedure Function Example1 :
+## 24- Procedure Function Example1 :
           #include <iostream>
           #include <string>
           #include <cmath>
@@ -577,7 +577,7 @@ Task Duration In Seconds:
             return 0;
           }
 ## Function Example2:
-## Calculate Area Rectangle:
+##25-  Calculate Area Rectangle:
           #include <iostream>
           #include <string>
           #include <cmath>
@@ -599,7 +599,7 @@ Task Duration In Seconds:
             return 0;
           }
 ## Function Example3:
-## Calculate Rectangle Area through Diagonal and side area:
+## 26- Calculate Rectangle Area through Diagonal and side area:
 
           #include <iostream>
           #include <string>
@@ -4309,9 +4309,66 @@ int main()
           
             return 0;
           }
+## Write a program to print random Small letters, Capital Letters, Special Characters, and digits in order.
+
+          #include <iostream>
+          #include <string>
+          #include <cmath>
+          #include <cstdlib>
+          using namespace std;
+          
+          int RandomNumber(int from, int to)
+          {
+            int randNum = rand() % (to - from + 1) + from;
+            return randNum;
+          }
+          enum enCharType
+          {
+            SmallLetter = 1,
+            CapitalLetter = 2,
+            SpecialCharacter = 3,
+            Digit = 4
+          };
+          
+          char GetRandCharacter(enCharType CharType)
+          {
+            switch (CharType)
+            {
+            case enCharType::SmallLetter:
+            {
+              return char(RandomNumber(97, 122));
+              break;
+            }
+            case enCharType::CapitalLetter:
+            {
+              return char(RandomNumber(65, 90));
+              break;
+            }
+            case enCharType::SpecialCharacter:
+            {
+              return char(RandomNumber(33, 47));
+              break;
+            }
+            case enCharType::Digit:
+            {
+              return char(RandomNumber(48, 57));
+              break;
+            }
+            }
+          }
+          
+          int main(){
+            srand((unsigned )time(NULL));
+          
+            cout<<GetRandCharacter(enCharType::CapitalLetter)<<endl;
+            cout<<GetRandCharacter(enCharType::Digit)<<endl;
+            cout<<GetRandCharacter(enCharType::SmallLetter)<<endl;
+            cout<<GetRandCharacter(enCharType::SpecialCharacter)<<endl;
+          
+            return 0;
+          }
+
 ## 
-
-
 
 
 
